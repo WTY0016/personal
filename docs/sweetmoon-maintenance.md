@@ -40,6 +40,11 @@ sweetmoon/data/journey.json
 - `scenes[].background.image`：当前段落的背景图，会随滚动淡入淡出
 - `scenes[].map.points`：地图路线点，可加入中转地、火车经停点或市内动线
 - `scenes[].images`：国家/城市图文展示图片
+- `scenes[].spotlight`：城市段重点推荐图文卡，可放博物馆、景点、餐厅、特色美食、避雷项
+- `scenes[].spotlight[].kind`：图文卡分类，如 `博物馆`、`餐厅`、`特色美食`
+- `scenes[].spotlight[].title`：图文卡标题
+- `scenes[].spotlight[].image`：图文卡图片地址
+- `scenes[].spotlight[].description`：图文卡说明文字
 - `scenes[].sections`：景点、美食、特产、购物等图文说明
 - `scenes[].tips`：交通、购票、安全等提示
 

@@ -81,9 +81,16 @@
 
   function renderStory(scenes) {
     elements.storyColumn.innerHTML = scenes.map((scene, index) => {
-      const imageStrip = scene.images ? `
+      const hasSpotlight = Array.isArray(scene.spotlight) && scene.spotlight.length > 0;
+      const imageStrip = !hasSpotlight && scene.images ? `
         <div class="scene-images">
           ${scene.images.map((image, imageIndex) => `<img src="${escapeAttribute(image)}" alt="${escapeAttribute(scene.title)} ${imageIndex + 1}" loading="lazy" decoding="async">`).join("")}
+        </div>
+      ` : "";
+
+      const spotlight = hasSpotlight ? `
+        <div class="spotlight-grid">
+          ${scene.spotlight.map((item) => spotlightMarkup(item)).join("")}
         </div>
       ` : "";
 
@@ -111,6 +118,7 @@
         <h2>${escapeHtml(scene.title)}</h2>
         <p class="scene-summary">${escapeHtml(scene.summary)}</p>
         ${imageStrip}
+        ${spotlight}
         ${sections}
         ${tips}
       </article>`;
@@ -299,18 +307,54 @@
   }
 
   function renderMedia(scene) {
-    const images = scene.images || [scene.background.image];
-    const lead = images[0] || scene.background.image;
-    const supporting = images.slice(1, 4);
+    const media = sceneMedia(scene);
+    const lead = media[0];
+    const supporting = media.slice(1, 4);
 
     elements.stageMedia.innerHTML = `
-      <div class="media-hero">
-        <img src="${escapeAttribute(lead)}" alt="${escapeAttribute(scene.title)}" loading="lazy" decoding="async">
-      </div>
+      <figure class="media-hero">
+        <img src="${escapeAttribute(lead.image)}" alt="${escapeAttribute(lead.title)}" loading="lazy" decoding="async">
+        <figcaption>
+          <span>${escapeHtml(lead.kind)}</span>
+          <strong>${escapeHtml(lead.title)}</strong>
+        </figcaption>
+      </figure>
       <div class="media-stack">
-        ${supporting.map((image, index) => `<img src="${escapeAttribute(image)}" alt="${escapeAttribute(scene.title)} ${index + 2}" loading="lazy" decoding="async">`).join("")}
+        ${supporting.map((item) => `
+          <figure>
+            <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title)}" loading="lazy" decoding="async">
+            <figcaption>${escapeHtml(item.title)}</figcaption>
+          </figure>
+        `).join("")}
       </div>
     `;
+  }
+
+  function sceneMedia(scene) {
+    if (Array.isArray(scene.spotlight) && scene.spotlight.length > 0) {
+      return scene.spotlight.map((item) => ({
+        image: item.image,
+        kind: item.kind || "推荐",
+        title: item.title || scene.title
+      }));
+    }
+
+    return (scene.images || [scene.background.image]).map((image, index) => ({
+      image,
+      kind: scene.mode || scene.type || "推荐",
+      title: index === 0 ? scene.title : `${scene.title} ${index + 1}`
+    }));
+  }
+
+  function spotlightMarkup(item) {
+    return `<figure class="spotlight-card">
+      <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title)}" loading="lazy" decoding="async">
+      <figcaption>
+        <span>${escapeHtml(item.kind || "推荐")}</span>
+        <strong>${escapeHtml(item.title)}</strong>
+        <p>${escapeHtml(item.description)}</p>
+      </figcaption>
+    </figure>`;
   }
 
   function routeColor(mode) {

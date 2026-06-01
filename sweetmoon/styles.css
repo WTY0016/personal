@@ -398,6 +398,69 @@ body[data-tone="sky"] .ambient-scrim {
   height: 370px;
 }
 
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.spotlight-card {
+  position: relative;
+  min-height: 290px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid rgba(248, 241, 230, .16);
+  background: rgba(5, 10, 18, .5);
+}
+
+.spotlight-card img {
+  width: 100%;
+  height: 100%;
+  min-height: 290px;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform .55s ease, filter .55s ease;
+  filter: saturate(.92) contrast(1.03);
+}
+
+.spotlight-card:hover img {
+  transform: scale(1.08);
+  filter: saturate(1.06) contrast(1.08);
+}
+
+.spotlight-card figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 18px;
+  background:
+    linear-gradient(180deg, transparent, rgba(5, 10, 18, .72) 26%, rgba(5, 10, 18, .92));
+}
+
+.spotlight-card span,
+.media-hero figcaption span {
+  display: block;
+  color: var(--gold);
+  font-size: .72rem;
+  text-transform: uppercase;
+}
+
+.spotlight-card strong,
+.media-hero figcaption strong {
+  display: block;
+  margin-top: 4px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.28rem;
+  line-height: 1.1;
+}
+
+.spotlight-card p {
+  margin: 9px 0 0;
+  color: rgba(248, 241, 230, .78);
+  font-size: .92rem;
+  line-height: 1.5;
+}
+
 .scene-sections {
   display: grid;
   gap: 18px;
@@ -477,6 +540,8 @@ body[data-tone="sky"] .ambient-scrim {
 }
 
 .media-hero {
+  position: relative;
+  margin: 0;
   min-height: 0;
   overflow: hidden;
 }
@@ -488,16 +553,43 @@ body[data-tone="sky"] .ambient-scrim {
   object-fit: cover;
 }
 
+.media-hero figcaption {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  padding: 14px;
+  border: 1px solid rgba(248, 241, 230, .16);
+  background: rgba(5, 10, 18, .66);
+  backdrop-filter: blur(16px);
+}
+
 .media-stack {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
 }
 
+.media-stack figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
 .media-stack img {
   width: 100%;
   height: 120px;
   object-fit: cover;
+}
+
+.media-stack figcaption {
+  position: absolute;
+  inset: auto 0 0;
+  padding: 8px;
+  background: linear-gradient(180deg, transparent, rgba(5, 10, 18, .88));
+  color: rgba(248, 241, 230, .86);
+  font-size: .76rem;
+  line-height: 1.2;
 }
 
 .stage-caption {
@@ -797,6 +889,15 @@ body[data-tone="sky"] .ambient-scrim {
   .scene-images img,
   .scene-images img:first-child {
     height: 220px;
+  }
+
+  .spotlight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .spotlight-card,
+  .spotlight-card img {
+    min-height: 260px;
   }
 
   .media-hero img {
