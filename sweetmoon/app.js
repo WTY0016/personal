@@ -6,6 +6,8 @@
     map: null,
     routeLayer: null,
     routeLine: null,
+    routeProgressLine: null,
+    routeMetrics: null,
     pointMarkers: [],
     vehicleMarker: null,
     activeBackgroundLayer: 0,
@@ -199,6 +201,7 @@
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
         const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
         elements.scrollProgressBar.style.transform = `scaleX(${progress})`;
+        updateActiveStageProgress();
         state.ticking = false;
       });
     };
@@ -254,6 +257,8 @@
     }
 
     const applyStage = () => {
+      if (state.data?.scenes[state.activeIndex] !== scene) return;
+
       elements.stagePanel.dataset.stageMode = isTransport ? scene.mode : scene.type;
       elements.stageKicker.textContent = scene.eyebrow;
       elements.stageTitle.textContent = scene.title;
@@ -271,17 +276,21 @@
       requestAnimationFrame(() => {
         elements.stageContent.classList.remove("is-switching");
         elements.stagePanel.classList.remove("is-switching");
+        updateActiveStageProgress();
       });
     };
 
-    if (state.visibleStageType === null) {
+    if (state.visibleStageType === null || isCoarsePointer()) {
       applyStage();
       return;
     }
 
     elements.stagePanel.classList.add("is-switching");
     elements.stageContent.classList.add("is-switching");
-    state.stageSwitchTimer = setTimeout(applyStage, 320);
+    state.stageSwitchTimer = setTimeout(() => {
+      state.stageSwitchTimer = null;
+      applyStage();
+    }, 320);
   }
 
   function renderRoute(scene) {
@@ -291,13 +300,22 @@
 
     const points = scene.map.points.map((point) => [point.lat, point.lng]);
     const color = routeColor(scene.mode);
+    state.routeMetrics = buildRouteMetrics(points);
 
     state.routeLine = L.polyline(points, {
       color,
       weight: scene.mode === "flight" ? 3 : 4,
-      opacity: 0.95,
+      opacity: 0.26,
       dashArray: scene.mode === "flight" ? "10 12" : scene.mode === "local" ? "6 8" : null,
-      className: `route-line route-${scene.mode}`
+      className: `route-line route-base route-${scene.mode}`
+    }).addTo(state.routeLayer);
+
+    state.routeProgressLine = L.polyline([points[0]], {
+      color,
+      weight: scene.mode === "flight" ? 4 : 5,
+      opacity: 0.98,
+      dashArray: scene.mode === "flight" ? "10 12" : scene.mode === "local" ? "6 8" : null,
+      className: `route-line route-progress route-${scene.mode}`
     }).addTo(state.routeLayer);
 
     scene.map.points.forEach((point, index) => {
@@ -312,10 +330,10 @@
       state.pointMarkers.push(marker);
     });
 
-    const vehiclePoint = points[Math.floor(points.length / 2)];
+    const vehiclePoint = points[0];
     state.vehicleMarker = L.marker(vehiclePoint, {
       icon: L.divIcon({
-        html: `<span>${escapeHtml(scene.map.vehicle)}</span>`,
+        html: `<span class="vehicle-symbol">${escapeHtml(scene.map.vehicle)}</span>`,
         className: `vehicle-icon vehicle-${scene.mode}`,
         iconSize: [44, 44],
         iconAnchor: [22, 22]
@@ -328,7 +346,134 @@
       maxZoom: scene.mode === "local" ? 13 : scene.mode === "train" ? 7 : 4
     });
 
-    setTimeout(() => state.map.invalidateSize(), 80);
+    updateRouteProgress(scene, routeSceneProgress(state.activeIndex));
+    setTimeout(() => {
+      state.map.invalidateSize();
+      updateActiveStageProgress();
+    }, 80);
+  }
+
+  function updateActiveStageProgress() {
+    const scene = state.data?.scenes[state.activeIndex];
+    if (!scene) return;
+
+    const progress = routeSceneProgress(state.activeIndex);
+    if (scene.type === "transport" && scene.map) {
+      updateRouteProgress(scene, progress);
+      return;
+    }
+
+    updateMediaProgress(progress);
+  }
+
+  function updateMediaProgress(progress) {
+    if (!elements.stageMedia.classList.contains("is-visible")) return;
+    const maxScroll = elements.stageMedia.scrollHeight - elements.stageMedia.clientHeight;
+    if (maxScroll <= 0) return;
+    elements.stageMedia.scrollTop = maxScroll * progress;
+  }
+
+  function routeSceneProgress(index) {
+    const sceneElement = document.querySelector(`[data-scene-index="${index}"]`);
+    if (!sceneElement) return 0;
+
+    const rect = sceneElement.getBoundingClientRect();
+    const startLine = window.innerHeight * 0.72;
+    const endLine = window.innerHeight * 0.24;
+    const distance = rect.height + startLine - endLine;
+    if (distance <= 0) return 0;
+
+    return clamp((startLine - rect.top) / distance, 0, 1);
+  }
+
+  function updateRouteProgress(scene, progress) {
+    if (!state.routeMetrics || !state.routeProgressLine || !state.vehicleMarker) return;
+
+    const route = interpolateRoute(state.routeMetrics, progress);
+    state.routeProgressLine.setLatLngs(route.traveled);
+    state.vehicleMarker.setLatLng(route.latLng);
+    state.vehicleMarker.setZIndexOffset(1000);
+
+    const markerElement = state.vehicleMarker.getElement();
+    if (markerElement) {
+      markerElement.style.setProperty("--vehicle-angle", `${route.bearing}deg`);
+      markerElement.setAttribute("aria-label", `${scene.mode === "train" ? "火车" : scene.mode === "flight" ? "飞机" : "交通工具"}行进进度 ${Math.round(progress * 100)}%`);
+    }
+  }
+
+  function buildRouteMetrics(points) {
+    const latLngs = points.map((point) => L.latLng(point[0], point[1]));
+    const segments = [];
+    let total = 0;
+
+    for (let index = 0; index < latLngs.length - 1; index += 1) {
+      const from = latLngs[index];
+      const to = latLngs[index + 1];
+      const length = Math.max(from.distanceTo(to), 1);
+      const start = total;
+      total += length;
+      segments.push({ from, to, start, end: total, length });
+    }
+
+    return { latLngs, segments, total };
+  }
+
+  function interpolateRoute(metrics, progress) {
+    if (!metrics.segments.length) {
+      const [latLng] = metrics.latLngs;
+      return { latLng, traveled: [latLng], bearing: 0 };
+    }
+
+    const target = metrics.total * clamp(progress, 0, 1);
+    const traveled = [metrics.latLngs[0]];
+
+    for (const segment of metrics.segments) {
+      if (target >= segment.end) {
+        traveled.push(segment.to);
+        continue;
+      }
+
+      const segmentProgress = clamp((target - segment.start) / segment.length, 0, 1);
+      const latLng = interpolateLatLng(segment.from, segment.to, segmentProgress);
+      traveled.push(latLng);
+      return {
+        latLng,
+        traveled,
+        bearing: routeBearing(segment.from, segment.to)
+      };
+    }
+
+    const lastSegment = metrics.segments[metrics.segments.length - 1];
+    const lastLatLng = metrics.latLngs[metrics.latLngs.length - 1];
+    return {
+      latLng: lastLatLng,
+      traveled,
+      bearing: routeBearing(lastSegment.from, lastSegment.to)
+    };
+  }
+
+  function interpolateLatLng(from, to, progress) {
+    return L.latLng(
+      from.lat + (to.lat - from.lat) * progress,
+      from.lng + (to.lng - from.lng) * progress
+    );
+  }
+
+  function routeBearing(from, to) {
+    const startLat = degreesToRadians(from.lat);
+    const endLat = degreesToRadians(to.lat);
+    const deltaLng = degreesToRadians(to.lng - from.lng);
+    const y = Math.sin(deltaLng) * Math.cos(endLat);
+    const x = Math.cos(startLat) * Math.sin(endLat) - Math.sin(startLat) * Math.cos(endLat) * Math.cos(deltaLng);
+    return (radiansToDegrees(Math.atan2(y, x)) + 360) % 360;
+  }
+
+  function degreesToRadians(value) {
+    return value * Math.PI / 180;
+  }
+
+  function radiansToDegrees(value) {
+    return value * 180 / Math.PI;
   }
 
   function clearRouteLayers() {
@@ -343,6 +488,8 @@
     document.querySelectorAll(".route-tooltip").forEach((tooltip) => tooltip.remove());
     state.pointMarkers = [];
     state.routeLine = null;
+    state.routeProgressLine = null;
+    state.routeMetrics = null;
     state.vehicleMarker = null;
   }
 
@@ -500,6 +647,10 @@
 
   function listMarkup(items) {
     return `<ul>${items.map((item) => `<li>${escapeHtml(item)}</li>`).join("")}</ul>`;
+  }
+
+  function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
   }
 
   function toCamel(value) {

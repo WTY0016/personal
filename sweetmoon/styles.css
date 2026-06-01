@@ -771,15 +771,23 @@ body[data-tone="sky"] .ambient-scrim {
 }
 
 .route-line {
+  transition: stroke-dashoffset .15s linear;
+}
+
+.route-base {
+  filter: none;
+}
+
+.route-progress {
   filter: drop-shadow(0 0 12px rgba(232, 200, 137, .55));
   animation: routeDash 1.5s linear infinite;
 }
 
-.route-flight {
+.route-progress.route-flight {
   filter: drop-shadow(0 0 14px rgba(139, 201, 195, .65));
 }
 
-.route-local {
+.route-progress.route-local {
   filter: drop-shadow(0 0 12px rgba(217, 155, 165, .62));
 }
 
@@ -791,6 +799,7 @@ body[data-tone="sky"] .ambient-scrim {
 }
 
 .vehicle-icon {
+  --vehicle-angle: 0deg;
   display: grid;
   place-items: center;
   width: 44px;
@@ -803,8 +812,19 @@ body[data-tone="sky"] .ambient-scrim {
   font-size: 1.25rem;
 }
 
-.vehicle-flight {
-  transform: rotate(24deg);
+.vehicle-symbol {
+  display: block;
+  transform: rotate(var(--vehicle-angle));
+  transition: transform .12s linear;
+  will-change: transform;
+}
+
+.vehicle-flight .vehicle-symbol {
+  transform: rotate(calc(var(--vehicle-angle) - 45deg));
+}
+
+.vehicle-local .vehicle-symbol {
+  transform: none;
 }
 
 .map-fallback {
@@ -1043,8 +1063,9 @@ body[data-tone="sky"] .ambient-scrim {
     z-index: 30;
     width: calc(100% + 36px);
     max-width: calc(100% + 36px);
-    height: 360px;
-    min-height: 360px;
+    height: calc(100svh - 98px);
+    min-height: 520px;
+    max-height: 760px;
     margin: 0 -18px 22px;
     padding: 10px;
     border-left: 0;
