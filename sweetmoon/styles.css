@@ -1049,6 +1049,7 @@ body[data-tone="sky"] .ambient-scrim {
     padding: 10px;
     border-left: 0;
     border-right: 0;
+    touch-action: pan-y;
   }
 
   .stage-panel-header {
@@ -1075,12 +1076,32 @@ body[data-tone="sky"] .ambient-scrim {
   }
 
   .stage-media.is-visible {
+    overflow: hidden;
     padding: 10px;
+    scrollbar-width: none;
+  }
+
+  .stage-media.is-visible::-webkit-scrollbar {
+    display: none;
   }
 
   .stage-media-grid {
     grid-template-columns: 1fr;
     min-height: 0;
+  }
+
+  .stage-content,
+  .stage-map,
+  .stage-media {
+    touch-action: pan-y;
+  }
+
+  .stage-map {
+    pointer-events: none;
+  }
+
+  .stage-map .leaflet-control-container {
+    display: none;
   }
 
   .stage-highlights {

@@ -143,13 +143,23 @@
       return;
     }
 
+    const passiveMap = isCoarsePointer();
     state.map = L.map(elements.stageMap, {
-      zoomControl: false,
+      zoomControl: !passiveMap,
+      dragging: !passiveMap,
       scrollWheelZoom: false,
+      touchZoom: !passiveMap,
+      doubleClickZoom: !passiveMap,
+      boxZoom: false,
+      keyboard: false,
+      tap: !passiveMap,
       attributionControl: true
     }).setView([48.8, 18], 4);
 
-    L.control.zoom({ position: "bottomright" }).addTo(state.map);
+    if (!passiveMap) {
+      L.control.zoom({ position: "bottomright" }).addTo(state.map);
+    }
+
     L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
       subdomains: "abcd",
       maxZoom: 19,
@@ -157,6 +167,10 @@
     }).addTo(state.map);
 
     state.routeLayer = L.layerGroup().addTo(state.map);
+  }
+
+  function isCoarsePointer() {
+    return window.matchMedia?.("(pointer: coarse)").matches || window.innerWidth <= 900;
   }
 
   function setupSceneObserver() {
