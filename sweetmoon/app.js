@@ -9,6 +9,8 @@
     pointMarkers: [],
     vehicleMarker: null,
     activeBackgroundLayer: 0,
+    visibleStageType: null,
+    stageSwitchTimer: null,
     ticking: false
   };
 
@@ -22,7 +24,7 @@
 
     try {
       state.data = await fetchJson(DATA_URL);
-      renderDateRail(state.data.meta);
+      renderDateRail(state.data.meta, state.data.scenes);
       renderStory(state.data.scenes);
       renderSources(state.data.sources);
       setupMap();
@@ -42,9 +44,12 @@
       "rail-range",
       "date-list",
       "story-column",
+      "stage-panel",
+      "stage-content",
+      "stage-kicker",
+      "stage-title",
       "stage-map",
       "stage-media",
-      "stage-caption",
       "sources-list"
     ].forEach((id) => {
       elements[toCamel(id)] = document.getElementById(id);
@@ -57,15 +62,20 @@
     return response.json();
   }
 
-  function renderDateRail(meta) {
+  function renderDateRail(meta, scenes) {
     const dates = dateRange(meta.startDate, meta.endDate);
     const first = formatMonthDay(meta.startDate);
     const last = formatMonthDay(meta.endDate);
     elements.railRange.textContent = `${first} - ${last}`;
     elements.dateList.innerHTML = dates.map((date) => {
+      const scene = primarySceneForDate(date, scenes);
       return `<button type="button" class="date-node" data-date="${date}">
-        <span>${formatMonthDay(date)}</span>
-        <strong>${weekdayLabel(date)}</strong>
+        <span class="date-marker" aria-hidden="true"></span>
+        <span class="date-copy">
+          <span class="date-value">${formatMonthDay(date)}</span>
+          <strong>${weekdayLabel(date)}</strong>
+          <em>${escapeHtml(scene ? railLabel(scene) : "行程")}</em>
+        </span>
       </button>`;
     }).join("");
 
@@ -82,15 +92,9 @@
   function renderStory(scenes) {
     elements.storyColumn.innerHTML = scenes.map((scene, index) => {
       const hasSpotlight = Array.isArray(scene.spotlight) && scene.spotlight.length > 0;
-      const imageStrip = !hasSpotlight && scene.images ? `
-        <div class="scene-images">
-          ${scene.images.map((image, imageIndex) => `<img src="${escapeAttribute(image)}" alt="${escapeAttribute(scene.title)} ${imageIndex + 1}" loading="lazy" decoding="async">`).join("")}
-        </div>
-      ` : "";
-
       const spotlight = hasSpotlight ? `
-        <div class="spotlight-grid">
-          ${scene.spotlight.map((item) => spotlightMarkup(item)).join("")}
+        <div class="scene-highlights">
+          ${scene.spotlight.map((item) => highlightMarkup(item)).join("")}
         </div>
       ` : "";
 
@@ -117,7 +121,6 @@
         <p class="eyebrow">${escapeHtml(scene.eyebrow)}</p>
         <h2>${escapeHtml(scene.title)}</h2>
         <p class="scene-summary">${escapeHtml(scene.summary)}</p>
-        ${imageStrip}
         ${spotlight}
         ${sections}
         ${tips}
@@ -229,19 +232,42 @@
 
   function updateStage(scene) {
     const isTransport = scene.type === "transport";
-    elements.stageMap.classList.toggle("is-visible", isTransport);
-    elements.stageMedia.classList.toggle("is-visible", !isTransport);
+    const nextType = isTransport ? "map" : "media";
 
-    if (isTransport) {
-      renderRoute(scene);
-    } else {
-      renderMedia(scene);
+    if (state.stageSwitchTimer) {
+      clearTimeout(state.stageSwitchTimer);
+      state.stageSwitchTimer = null;
     }
 
-    elements.stageCaption.innerHTML = `
-      <span>${escapeHtml(scene.eyebrow)}</span>
-      <strong>${escapeHtml(scene.title)}</strong>
-    `;
+    const applyStage = () => {
+      elements.stagePanel.dataset.stageMode = isTransport ? scene.mode : scene.type;
+      elements.stageKicker.textContent = scene.eyebrow;
+      elements.stageTitle.textContent = scene.title;
+      elements.stageMap.classList.toggle("is-visible", nextType === "map");
+      elements.stageMedia.classList.toggle("is-visible", nextType === "media");
+
+      if (isTransport) {
+        renderRoute(scene);
+      } else {
+        clearRouteLayers();
+        renderMedia(scene);
+      }
+
+      state.visibleStageType = nextType;
+      requestAnimationFrame(() => {
+        elements.stageContent.classList.remove("is-switching");
+        elements.stagePanel.classList.remove("is-switching");
+      });
+    };
+
+    if (state.visibleStageType === null) {
+      applyStage();
+      return;
+    }
+
+    elements.stagePanel.classList.add("is-switching");
+    elements.stageContent.classList.add("is-switching");
+    state.stageSwitchTimer = setTimeout(applyStage, 320);
   }
 
   function renderRoute(scene) {
@@ -310,24 +336,53 @@
     const media = sceneMedia(scene);
     const lead = media[0];
     const supporting = media.slice(1, 4);
-
-    elements.stageMedia.innerHTML = `
-      <figure class="media-hero">
-        <img src="${escapeAttribute(lead.image)}" alt="${escapeAttribute(lead.title)}" loading="lazy" decoding="async">
-        <figcaption>
-          <span>${escapeHtml(lead.kind)}</span>
-          <strong>${escapeHtml(lead.title)}</strong>
-        </figcaption>
-      </figure>
-      <div class="media-stack">
-        ${supporting.map((item) => `
-          <figure>
-            <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title)}" loading="lazy" decoding="async">
-            <figcaption>${escapeHtml(item.title)}</figcaption>
-          </figure>
+    const highlights = Array.isArray(scene.spotlight) && scene.spotlight.length > 0 ? `
+      <div class="stage-highlights">
+        ${scene.spotlight.map((item) => stageHighlightMarkup(item)).join("")}
+      </div>
+    ` : "";
+    const sections = scene.sections ? `
+      <div class="stage-sections">
+        ${scene.sections.map((section) => `
+          <section>
+            <h3>${escapeHtml(section.title)}</h3>
+            ${listMarkup(section.items)}
+          </section>
         `).join("")}
       </div>
+    ` : "";
+    const tips = scene.tips ? `
+      <div class="stage-tips">
+        <h3>Tips</h3>
+        ${listMarkup(scene.tips)}
+      </div>
+    ` : "";
+
+    elements.stageMedia.innerHTML = `
+      <div class="stage-media-grid">
+        <figure class="media-hero">
+          <img src="${escapeAttribute(lead.image)}" alt="${escapeAttribute(lead.title)}" loading="lazy" decoding="async">
+          <figcaption>
+            <span>${escapeHtml(lead.kind)}</span>
+            <strong>${escapeHtml(lead.title)}</strong>
+            ${lead.description ? `<p>${escapeHtml(lead.description)}</p>` : ""}
+          </figcaption>
+        </figure>
+        <div class="media-stack">
+          ${supporting.map((item) => `
+            <figure>
+              <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title)}" loading="lazy" decoding="async">
+              <figcaption>${escapeHtml(item.title)}</figcaption>
+            </figure>
+          `).join("")}
+        </div>
+      </div>
+      <p class="stage-summary">${escapeHtml(scene.summary)}</p>
+      ${highlights}
+      ${sections}
+      ${tips}
     `;
+    elements.stageMedia.scrollTop = 0;
   }
 
   function sceneMedia(scene) {
@@ -335,26 +390,38 @@
       return scene.spotlight.map((item) => ({
         image: item.image,
         kind: item.kind || "推荐",
-        title: item.title || scene.title
+        title: item.title || scene.title,
+        description: item.description || ""
       }));
     }
 
     return (scene.images || [scene.background.image]).map((image, index) => ({
       image,
       kind: scene.mode || scene.type || "推荐",
-      title: index === 0 ? scene.title : `${scene.title} ${index + 1}`
+      title: index === 0 ? scene.title : `${scene.title} ${index + 1}`,
+      description: index === 0 ? scene.summary : ""
     }));
   }
 
-  function spotlightMarkup(item) {
-    return `<figure class="spotlight-card">
+  function highlightMarkup(item) {
+    return `<article class="highlight-item">
+      <span>${escapeHtml(item.kind || "推荐")}</span>
+      <div>
+        <strong>${escapeHtml(item.title)}</strong>
+        <p>${escapeHtml(item.description)}</p>
+      </div>
+    </article>`;
+  }
+
+  function stageHighlightMarkup(item) {
+    return `<article class="stage-highlight">
       <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title)}" loading="lazy" decoding="async">
-      <figcaption>
+      <div>
         <span>${escapeHtml(item.kind || "推荐")}</span>
         <strong>${escapeHtml(item.title)}</strong>
         <p>${escapeHtml(item.description)}</p>
-      </figcaption>
-    </figure>`;
+      </div>
+    </article>`;
   }
 
   function routeColor(mode) {
@@ -362,6 +429,22 @@
     if (mode === "train") return "#e9c98f";
     if (mode === "local") return "#d99ba5";
     return "#f5efe7";
+  }
+
+  function primarySceneForDate(date, scenes) {
+    const value = dateValue(date);
+    const matches = scenes.filter((scene) => dateInside(value, scene.startDate, scene.endDate));
+    return matches.find((scene) => scene.type === "city")
+      || matches.find((scene) => scene.type === "country")
+      || matches[0];
+  }
+
+  function railLabel(scene) {
+    if (scene.mode === "flight") return "飞行";
+    if (scene.mode === "train") return "火车";
+    if (scene.mode === "local") return "市内";
+    const [label] = scene.title.split(/[：:]/);
+    return label.length > 7 ? label.slice(0, 7) : label;
   }
 
   function dateRange(startDate, endDate) {

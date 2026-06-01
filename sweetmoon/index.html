@@ -55,12 +55,17 @@
         <div class="date-list" id="date-list"></div>
       </aside>
 
-      <div class="story-column" id="story-column"></div>
+      <div class="story-column" id="story-column" aria-hidden="true"></div>
 
-      <aside class="stage" aria-label="当前旅程画面">
-        <div class="stage-map" id="stage-map"></div>
-        <div class="stage-media" id="stage-media"></div>
-        <div class="stage-caption" id="stage-caption"></div>
+      <aside class="stage" id="stage-panel" aria-label="当前旅程画面">
+        <header class="stage-panel-header">
+          <span id="stage-kicker">Journey</span>
+          <strong id="stage-title">Sweetmoon Atlas</strong>
+        </header>
+        <div class="stage-content" id="stage-content" aria-live="polite">
+          <div class="stage-map" id="stage-map"></div>
+          <div class="stage-media" id="stage-media"></div>
+        </div>
       </aside>
     </section>
 
