@@ -23,9 +23,21 @@
         "vehicle": "✈",
         "label": "假数据 · 待校准航班",
         "points": [
-          { "label": "北京", "lat": 39.9042, "lng": 116.4074 },
-          { "label": "赫尔辛基中转", "lat": 60.3172, "lng": 24.9633 },
-          { "label": "斯德哥尔摩", "lat": 59.3293, "lng": 18.0686 }
+          {
+            "label": "北京",
+            "lat": 39.9042,
+            "lng": 116.4074
+          },
+          {
+            "label": "赫尔辛基中转",
+            "lat": 60.3172,
+            "lng": 24.9633
+          },
+          {
+            "label": "斯德哥尔摩",
+            "lat": 59.3293,
+            "lng": 18.0686
+          }
         ]
       },
       "tips": [
@@ -42,27 +54,117 @@
       "endDate": "2026-09-13",
       "eyebrow": "Sweden / Northern lightness",
       "title": "瑞典：水面、设计和不赶路的开场",
-      "summary": "瑞典段不是为了刷景点，而是让蜜月从北欧的空气、水面、咖啡和设计店开始。9 月早晚偏凉，城市很适合慢走。",
+      "summary": "瑞典段用来把蜜月节奏慢下来：白天看水岸、老城和博物馆，下午安排 Fika，晚上吃一顿瑞典肉丸或新北欧餐。9 月早晚偏凉，行程要留出换衣和休息时间。",
       "background": {
-        "image": "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?auto=format&fit=crop&w=2200&q=82",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gamla_stan_September_2014_01.jpg/1920px-Gamla_stan_September_2014_01.jpg",
         "tone": "day"
       },
       "images": [
-        "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=82"
+        {
+          "kind": "地标",
+          "title": "Gamla Stan",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gamla_stan_September_2014_01.jpg/1920px-Gamla_stan_September_2014_01.jpg",
+          "description": "斯德哥尔摩老城彩色立面和石板路，是瑞典段最直观的城市记忆。",
+          "caption": "老城"
+        },
+        {
+          "kind": "博物馆",
+          "title": "Vasa Museum",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Stockholm_Vasa_Museum_and_Nordic_Museum_09.jpg/1920px-Stockholm_Vasa_Museum_and_Nordic_Museum_09.jpg",
+          "description": "雨天和抵达后半天的高质量选项。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "甜点",
+          "title": "Kanelbulle",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Swedish_cinnamon_buns_at_Bullar_Food%2C_December_2011_%286552391537%29.jpg",
+          "description": "Fika 时间的核心。",
+          "caption": "Fika"
+        }
       ],
       "sections": [
         {
-          "title": "风土人情",
-          "items": ["Fika 咖啡时间是瑞典日常节奏的一部分。", "城市由群岛、水岸和桥连接，适合步行和短船线。", "北欧设计克制、实用，适合买轻便但有纪念感的小物。"]
+          "title": "建议节奏",
+          "items": [
+            "9/13 抵达后只安排老城、水岸和一顿正餐，不排需要准时入场的项目。",
+            "9/14 上午 Vasa Museum 或王宫，下午 Djurgården / Skeppsholmen，傍晚回水岸。",
+            "天气好优先水面和桥，天气差优先 Vasa、Nordiska 或 Nobel Prize Museum。"
+          ]
         },
         {
-          "title": "特产",
-          "items": ["羊毛围巾、家居小物、设计海报。", "瑞典咖啡、巧克力、摄影或设计书。", "Acne Studios、Toteme 等服饰品牌可按款式考虑。"]
+          "title": "风土人情",
+          "items": [
+            "Fika 是瑞典日常节奏的一部分，下午咖啡店会比“多刷一个点”更有记忆。",
+            "城市由群岛、水岸和桥连接，步行体验很好，但风大时体感温度会明显下降。",
+            "瑞典服务不一定热情外放，但规则清晰；订位、排队和准时更重要。"
+          ]
+        },
+        {
+          "title": "值得买",
+          "items": [
+            "轻便家居小物、设计海报、摄影书、羊毛围巾。",
+            "Svenskt Tenn、Design House Stockholm 一类店适合看有纪念感的小件。",
+            "Acne Studios、Toteme 等品牌可按实际价差和尺码考虑，不建议为了买而买。"
+          ]
+        },
+        {
+          "title": "避雷",
+          "items": [
+            "老城石板路不适合拖大箱，酒店最好先寄存行李再逛。",
+            "群岛船线受季节和天气影响，出发前一天再确认班次。",
+            "9 月早晚冷，单穿薄裙或衬衫拍照容易扛不住。"
+          ]
         }
       ],
-      "tips": ["9 月带薄外套和防风层。", "餐厅关门比意大利早，晚餐最好提前订。"]
+      "tips": [
+        "餐厅关门比意大利早，晚餐最好提前订。",
+        "公交和地铁可以用银行卡/交通 App，临时买单程票通常不划算。",
+        "带一件防风外套，水边会明显更冷。"
+      ],
+      "spotlight": [
+        {
+          "kind": "地标",
+          "title": "Gamla Stan 老城",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gamla_stan_September_2014_01.jpg/1920px-Gamla_stan_September_2014_01.jpg",
+          "description": "抵达后的第一段散步放这里最合适：Stortorget 彩色立面、窄巷、诺贝尔博物馆都在步行半径里。清晨拍照，人少也更有电影感。",
+          "caption": "地标"
+        },
+        {
+          "kind": "博物馆",
+          "title": "Vasa Museum",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Stockholm_Vasa_Museum_and_Nordic_Museum_09.jpg/1920px-Stockholm_Vasa_Museum_and_Nordic_Museum_09.jpg",
+          "description": "17 世纪战舰实物是斯德哥尔摩最强的博物馆体验之一。天气差、风大或体力一般时，把这里作为主景点更稳。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "地标",
+          "title": "Stockholm City Hall",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Stockholms_Stadshuset_City_Hall_Stockholm_2016_01.jpg/1920px-Stockholms_Stadshuset_City_Hall_Stockholm_2016_01.jpg",
+          "description": "市政厅和水岸适合黄昏散步，天气好可以把这里和 Norrmalm、国王花园串成一条轻松路线。",
+          "caption": "地标"
+        },
+        {
+          "kind": "餐厅",
+          "title": "Meatballs for the People",
+          "image": "https://static.thatsup.website/308/23970/DSCF0673.jpg?v=1696949221",
+          "description": "Södermalm 的瑞典肉丸餐厅候选，适合作为第一晚正餐。订位前看官网时段，热门晚餐时间不要临时硬排。",
+          "caption": "餐厅候选"
+        },
+        {
+          "kind": "特色美食",
+          "title": "Köttbullar 瑞典肉丸",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Swedish_meatballs_in_Gamla_stan%2C_Stockholm.jpg/1920px-Swedish_meatballs_in_Gamla_stan%2C_Stockholm.jpg",
+          "description": "土豆泥、奶油酱、越橘酱是经典组合。想避雷就别只找“游客必吃”，看午餐菜单和本地传统菜也很稳。",
+          "caption": "特色美食"
+        },
+        {
+          "kind": "甜点",
+          "title": "Fika 肉桂卷",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Swedish_cinnamon_buns_at_Bullar_Food%2C_December_2011_%286552391537%29.jpg",
+          "description": "下午给咖啡和肉桂卷留 40 分钟，不要把 Fika 当成路上随便买的甜点，它本身就是瑞典生活方式。",
+          "caption": "Fika"
+        }
+      ]
     },
     {
       "id": "stockholm-city",
@@ -74,68 +176,121 @@
       "title": "斯德哥尔摩：老城、群岛和设计商店",
       "summary": "用两天看老城、王宫、船岛和 Djurgården。天气好就把时间给水面，天气差就转博物馆和咖啡。",
       "background": {
-        "image": "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=2200&q=82",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gamla_stan_September_2014_01.jpg/1920px-Gamla_stan_September_2014_01.jpg",
         "tone": "day"
       },
       "images": [
-        "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=82"
+        {
+          "kind": "老城",
+          "title": "Gamla Stan",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gamla_stan_September_2014_01.jpg/1920px-Gamla_stan_September_2014_01.jpg",
+          "description": "彩色立面和石板路。",
+          "caption": "老城"
+        },
+        {
+          "kind": "博物馆",
+          "title": "Vasa Museum",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Stockholm_Vasa_Museum_and_Nordic_Museum_09.jpg/1920px-Stockholm_Vasa_Museum_and_Nordic_Museum_09.jpg",
+          "description": "战舰博物馆。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "地标",
+          "title": "Royal Palace",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/The_Royal_Palace_%2815891592359%29.jpg/1920px-The_Royal_Palace_%2815891592359%29.jpg",
+          "description": "王宫和水岸。",
+          "caption": "地标"
+        }
       ],
       "spotlight": [
         {
           "kind": "博物馆",
           "title": "Vasa Museum",
-          "image": "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?auto=format&fit=crop&w=1200&q=82",
-          "description": "斯德哥尔摩最值得留时间的博物馆之一，核心看点是 17 世纪战舰 Vasa；雨天或抵达后体力一般时很适合安排。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/Stockholm_Vasa_Museum_and_Nordic_Museum_09.jpg/1920px-Stockholm_Vasa_Museum_and_Nordic_Museum_09.jpg",
+          "description": "核心看点是保存完整的 17 世纪战舰 Vasa；建议预留 1.5-2 小时，不要只拍一张照片就走。",
+          "caption": "博物馆"
         },
         {
           "kind": "博物馆",
           "title": "Nobel Prize Museum",
-          "image": "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1200&q=82",
-          "description": "在老城 Stortorget 广场附近，可以和 Gamla Stan 老城散步串在一起；适合喜欢科学、文学和人物故事的行程。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/B%C3%B6rshuset%2C_Stockholm%2C_2019_%2801%29.jpg/1920px-B%C3%B6rshuset%2C_Stockholm%2C_2019_%2801%29.jpg",
+          "description": "位于老城 Stortorget 广场旁边，适合和 Gamla Stan 串联。展陈更偏人物、科学和文学故事，体量不大。",
+          "caption": "博物馆"
         },
         {
           "kind": "街区",
           "title": "Gamla Stan 老城",
-          "image": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=1200&q=82",
-          "description": "清晨人少时拍彩色立面和石板路，下午找咖啡店 Fika；不要拖大箱进去，路面和台阶都不友好。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Gamla_stan_September_2014_01.jpg/1920px-Gamla_stan_September_2014_01.jpg",
+          "description": "清晨拍彩色立面和石板路，下午找咖啡店 Fika；不要拖大箱进去，路面和台阶都不友好。",
+          "caption": "街区"
         },
         {
           "kind": "餐厅",
           "title": "Meatballs for the People",
-          "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=82",
-          "description": "想把瑞典肉丸作为第一顿正餐，可以优先看这家；位置在 Södermalm，建议提前订位或避开正餐尖峰。"
+          "image": "https://static.thatsup.website/308/23970/DSCF0673.jpg?v=1696949221",
+          "description": "想把瑞典肉丸作为第一顿正餐，可以优先看这家；位置在 Södermalm，建议提前订位或避开正餐尖峰。",
+          "caption": "餐厅候选"
         },
         {
           "kind": "特色美食",
           "title": "Köttbullar 与 Lingonberry",
-          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=82",
-          "description": "肉丸、土豆泥、奶油酱和越橘酱是经典组合；不要只找网红店，传统餐馆午餐菜单常常更稳。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Swedish_meatballs_in_Gamla_stan%2C_Stockholm.jpg/1920px-Swedish_meatballs_in_Gamla_stan%2C_Stockholm.jpg",
+          "description": "肉丸、土豆泥、奶油酱和越橘酱是经典组合；如果菜单里有鹿肉、牛肉或混合肉丸，可以两人点不同款。",
+          "caption": "特色美食"
         },
         {
           "kind": "下午茶",
-          "title": "Fika 与肉桂卷",
-          "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=82",
-          "description": "Fika 是瑞典城市节奏的一部分；下午给咖啡和甜点留 40 分钟，比连续赶景点更舒服。"
+          "title": "Fika 肉桂卷",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Swedish_cinnamon_buns_at_Bullar_Food%2C_December_2011_%286552391537%29.jpg",
+          "description": "Fika 适合安排在 15:00 左右，咖啡加肉桂卷就够了；别把甜点买太多，后面巴黎和意大利还有很多。",
+          "caption": "Fika"
+        },
+        {
+          "kind": "甜点",
+          "title": "Princess Cake",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Prinsesst%C3%A5rta.JPG/1920px-Prinsesst%C3%A5rta.JPG",
+          "description": "绿色杏仁糖皮的瑞典公主蛋糕适合买单块尝试；整只不适合旅行携带。",
+          "caption": "甜点"
         }
       ],
       "sections": [
         {
-          "title": "景点",
-          "items": ["Gamla Stan 老城：清晨和傍晚最好拍。", "Skeppsholmen 船岛：水面、桥和城市天际线。", "Djurgården：博物馆、绿地和水岸适合慢走。"]
+          "title": "9/13 抵达日",
+          "items": [
+            "酒店放行李后只走 Gamla Stan、王宫外观、Stortorget。",
+            "晚餐放 Södermalm 或老城边缘，不要排太远的餐厅。",
+            "如果倒时差明显，取消夜景计划，早点睡比硬撑更值。"
+          ]
         },
         {
-          "title": "美食",
-          "items": ["瑞典肉丸可以安排第一晚。", "肉桂卷和咖啡适合下午 Fika。", "想吃新北欧餐厅要提前订位。"]
+          "title": "9/14 完整日",
+          "items": [
+            "上午 Vasa Museum，顺路看 Djurgården 水岸。",
+            "午后 Fika，再回 Skeppsholmen / City Hall 看水面。",
+            "晴天可加一小段船线，雨天改 Nobel Prize Museum 或 Nordiska Museet。"
+          ]
         },
         {
           "title": "购买",
-          "items": ["Svenskt Tenn、Design House Stockholm 看家居小物。", "设计海报、羊毛围巾、香氛比大件更适合带回。"]
+          "items": [
+            "Svenskt Tenn 看家居小物，Design House Stockholm 看设计礼品。",
+            "博物馆商店可以买明信片、海报和设计书。",
+            "玻璃器皿和大件家居运输麻烦，除非非常喜欢。"
+          ]
+        },
+        {
+          "title": "避雷",
+          "items": [
+            "老城中心游客餐厅先看评分和菜单，不要只被门口照片吸引。",
+            "出租车价格差异较大，优先公共交通或官方叫车。",
+            "夜晚水边风大，拍照要控制时间。"
+          ]
         }
       ],
-      "tips": ["老城石板路不适合拖大箱。", "群岛船线根据天气和季节班次调整。"]
+      "tips": [
+        "Vasa 和 Nobel 的开放时间出发前按官网复核。",
+        "瑞典很多地方无现金，准备能境外刷的 Visa/Mastercard。"
+      ]
     },
     {
       "id": "stockholm-paris-flight",
@@ -154,11 +309,23 @@
         "vehicle": "✈",
         "label": "Stockholm ARN → Paris CDG/ORY",
         "points": [
-          { "label": "斯德哥尔摩", "lat": 59.3293, "lng": 18.0686 },
-          { "label": "巴黎", "lat": 48.8566, "lng": 2.3522 }
+          {
+            "label": "斯德哥尔摩",
+            "lat": 59.3293,
+            "lng": 18.0686
+          },
+          {
+            "label": "巴黎",
+            "lat": 48.8566,
+            "lng": 2.3522
+          }
         ]
       },
-      "tips": ["选择含托运行李票价。", "不要为了低价选择深夜抵达巴黎。", "抵达当晚不要安排不可退款门票。"]
+      "tips": [
+        "选择含托运行李票价。",
+        "不要为了低价选择深夜抵达巴黎。",
+        "抵达当晚不要安排不可退款门票。"
+      ]
     },
     {
       "id": "france-intro",
@@ -168,27 +335,117 @@
       "endDate": "2026-09-16",
       "eyebrow": "France / Romance & museums",
       "title": "法国：博物馆、河岸和一场正式晚餐",
-      "summary": "巴黎段停 4 晚，重点不是每天赶景点，而是把塞纳河、卢浮宫、奥赛、凡尔赛和购物节奏排舒服。",
+      "summary": "法国段以巴黎为核心：每天只放一个重景点，再用街区、甜点、河岸和一顿正式晚餐补足浪漫感。卢浮宫、奥赛、凡尔赛都需要提前看开放日和门票。",
       "background": {
-        "image": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=2200&q=82",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Cour_Napol%C3%A9on_at_night_-_Louvre.jpg/1920px-Cour_Napol%C3%A9on_at_night_-_Louvre.jpg",
         "tone": "golden"
       },
       "images": [
-        "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1565099824688-e93eb20fe622?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1591289009723-aef0a1a8a211?auto=format&fit=crop&w=1200&q=82"
+        {
+          "kind": "博物馆",
+          "title": "Louvre",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1920px-Louvre_Museum_Wikimedia_Commons.jpg",
+          "description": "巴黎最核心博物馆。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "博物馆",
+          "title": "Musée d'Orsay",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Giant_Clock_At_Mus%C3%A9e_D_Orsay_%28194005863%29.jpeg/1920px-Giant_Clock_At_Mus%C3%A9e_D_Orsay_%28194005863%29.jpeg",
+          "description": "钟面大厅和印象派。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "甜点",
+          "title": "Macaron",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Macaron_1.jpg",
+          "description": "伴手礼候选。",
+          "caption": "甜点"
+        }
       ],
       "sections": [
         {
-          "title": "风土人情",
-          "items": ["巴黎适合把一天拆成上午博物馆、下午街区、晚上餐厅。", "咖啡馆和河岸散步比连续赶点更像蜜月。", "博物馆商店比景区纪念品更值得买。"]
+          "title": "建议节奏",
+          "items": [
+            "9/16 巴黎开场：塞纳河、铁塔远眺、左岸晚餐。",
+            "9/17 艺术日：卢浮宫 + 奥赛二选一重看，另一个轻看。",
+            "9/18 凡尔赛日：宫殿和花园单独安排，晚上回巴黎休息。"
+          ]
         },
         {
-          "title": "特产",
-          "items": ["香水、香氛蜡烛、药妆、茶和巧克力。", "博物馆画册、丝巾和高质量明信片。"]
+          "title": "风土人情",
+          "items": [
+            "巴黎适合“上午预约景点、下午街区、晚上餐厅”的节奏。",
+            "咖啡馆不是只为了吃，坐 30 分钟看街景会比赶路更像蜜月。",
+            "博物馆商店质量通常比景区纪念品店更稳定。"
+          ]
+        },
+        {
+          "title": "值得买",
+          "items": [
+            "药妆、香氛蜡烛、香水小样、茶、巧克力。",
+            "卢浮宫/奥赛画册、丝巾、高质量明信片。",
+            "奢侈品先确认国内价差、退税比例和是否需要现场排队。"
+          ]
+        },
+        {
+          "title": "避雷",
+          "items": [
+            "铁塔、卢浮宫、地铁站周边注意签名板、手绳、假募捐。",
+            "不要买来路不明的“免排队票”。",
+            "景点第一排餐厅通常为位置付费，不适合作为正式晚餐首选。"
+          ]
         }
       ],
-      "tips": ["卢浮宫周二闭馆，凡尔赛周一闭馆，日期要按官网复核。", "铁塔、卢浮宫、地铁站周边注意签名板和手绳骗局。"]
+      "tips": [
+        "卢浮宫周二闭馆，凡尔赛周一闭馆，出发前按官网复核。",
+        "正式餐厅提前订位，临时找餐厅就降低期待。",
+        "地铁里手机不要拿在门边。"
+      ],
+      "spotlight": [
+        {
+          "kind": "博物馆",
+          "title": "Musée du Louvre",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1920px-Louvre_Museum_Wikimedia_Commons.jpg",
+          "description": "法国段的重景点，建议预约早场或夜场；只抓德农翼、胜利女神、蒙娜丽莎和拿破仑三世套间。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "博物馆",
+          "title": "Musée d'Orsay",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Giant_Clock_At_Mus%C3%A9e_D_Orsay_%28194005863%29.jpeg/1920px-Giant_Clock_At_Mus%C3%A9e_D_Orsay_%28194005863%29.jpeg",
+          "description": "由火车站改造的美术馆，印象派和钟面大厅都很适合蜜月照片；体量比卢浮宫轻松。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "宫殿",
+          "title": "Versailles Hall of Mirrors",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/1920px-Chateau_Versailles_Galerie_des_Glaces.jpg",
+          "description": "镜厅和花园是凡尔赛重点。建议单独半天到一天，不要和卢浮宫放同一天。",
+          "caption": "凡尔赛"
+        },
+        {
+          "kind": "教堂",
+          "title": "Sainte-Chapelle",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Santa_Capilla%2C_Par%C3%ADs%2C_Francia%2C_2022-11-01%2C_DD_80-82_HDR.jpg/1920px-Santa_Capilla%2C_Par%C3%ADs%2C_Francia%2C_2022-11-01%2C_DD_80-82_HDR.jpg",
+          "description": "彩窗非常适合阴天或午后光线，和西岱岛、巴黎圣母院外观可以串联。",
+          "caption": "彩窗"
+        },
+        {
+          "kind": "餐厅",
+          "title": "Le Comptoir du Relais",
+          "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1400&q=82",
+          "description": "圣日耳曼附近的法式小酒馆候选；能订就订，不能订就准备排队或换备选。",
+          "caption": "餐厅候选"
+        },
+        {
+          "kind": "甜点",
+          "title": "Macaron / Pastry",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Macaron_1.jpg",
+          "description": "不要一次买太多，按天试 Ladurée、Pierre Hermé 或附近面包房；茶和巧克力更适合带回。",
+          "caption": "甜点"
+        }
+      ]
     },
     {
       "id": "paris-city",
@@ -200,68 +457,129 @@
       "title": "巴黎：塞纳河、卢浮宫、奥赛和凡尔赛",
       "summary": "巴黎段按“浪漫开场、艺术日、凡尔赛日”排。晚上留给左岸餐厅或塞纳河，不把购物塞满。",
       "background": {
-        "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=2200&q=82",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/Cour_Napol%C3%A9on_at_night_-_Louvre.jpg/1920px-Cour_Napol%C3%A9on_at_night_-_Louvre.jpg",
         "tone": "night"
       },
       "images": [
-        "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1565099824688-e93eb20fe622?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1591289009723-aef0a1a8a211?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=82"
+        {
+          "kind": "博物馆",
+          "title": "Louvre",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1920px-Louvre_Museum_Wikimedia_Commons.jpg",
+          "description": "卢浮宫外观和金字塔。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "博物馆",
+          "title": "Orsay Clock",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/54/Giant_Clock_At_Mus%C3%A9e_D_Orsay_%28194005863%29.jpeg/1920px-Giant_Clock_At_Mus%C3%A9e_D_Orsay_%28194005863%29.jpeg",
+          "description": "奥赛钟面。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "宫殿",
+          "title": "Versailles",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Versailles-Chateau-Jardins02.jpg",
+          "description": "凡尔赛宫和花园。",
+          "caption": "宫殿"
+        }
       ],
       "spotlight": [
         {
           "kind": "博物馆",
           "title": "Musée du Louvre",
-          "image": "https://images.unsplash.com/photo-1565099824688-e93eb20fe622?auto=format&fit=crop&w=1200&q=82",
-          "description": "只抓镇馆路线：德农翼、胜利女神、蒙娜丽莎和拿破仑三世套间。不要试图一天看完，预约早场更稳。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Louvre_Museum_Wikimedia_Commons.jpg/1920px-Louvre_Museum_Wikimedia_Commons.jpg",
+          "description": "不要试图一天看完。建议提前收藏馆内路线：胜利女神、蒙娜丽莎、米洛的维纳斯、拿破仑三世套间。",
+          "caption": "博物馆"
         },
         {
           "kind": "博物馆",
           "title": "Musée d'Orsay",
-          "image": "https://images.unsplash.com/photo-1591289009723-aef0a1a8a211?auto=format&fit=crop&w=1200&q=82",
-          "description": "印象派和钟面大厅很适合蜜月节奏；比卢浮宫轻松，可以放在左岸散步之前或之后。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Musee_d_Orsay_main_hall_Paris_2023_dllu.jpg/1920px-Musee_d_Orsay_main_hall_Paris_2023_dllu.jpg",
+          "description": "印象派和主大厅非常适合慢看，安排 2-3 小时就能有完整体验。和塞纳河左岸散步顺路。",
+          "caption": "博物馆"
         },
         {
           "kind": "宫殿",
           "title": "Versailles",
-          "image": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1200&q=82",
-          "description": "凡尔赛建议单独半天到一天，宫殿、花园、特里亚农别塞太满；周一闭馆信息出发前再复核。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Chateau_Versailles_Galerie_des_Glaces.jpg/1920px-Chateau_Versailles_Galerie_des_Glaces.jpg",
+          "description": "凡尔赛建议买官方时段票，镜厅、花园、特里亚农三者不要全部硬塞；如果下雨就减少花园时间。",
+          "caption": "宫殿"
+        },
+        {
+          "kind": "教堂",
+          "title": "Sainte-Chapelle",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Santa_Capilla%2C_Par%C3%ADs%2C_Francia%2C_2022-11-01%2C_DD_80-82_HDR.jpg/1920px-Santa_Capilla%2C_Par%C3%ADs%2C_Francia%2C_2022-11-01%2C_DD_80-82_HDR.jpg",
+          "description": "彩窗主体明确，拍照效果比很多“网红点”更稳定；注意安检和入场时段。",
+          "caption": "彩窗"
         },
         {
           "kind": "餐厅",
           "title": "Le Comptoir du Relais",
-          "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=1200&q=82",
-          "description": "圣日耳曼一带的法式小酒馆氛围很适合巴黎正式晚餐；热门时段排队和订位规则要提前确认。"
+          "image": "https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1400&q=82",
+          "description": "圣日耳曼餐厅候选，适合安排一顿更正式但不夸张的晚餐；若订不到，可在左岸准备 2 个备选。",
+          "caption": "餐厅候选"
         },
         {
           "kind": "特色美食",
-          "title": "Bistro Classics",
-          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=82",
-          "description": "鸭腿、牛排薯条、洋葱汤、热巧克力都可以作为法式体验；景点门口第一排菜单通常性价比差。"
+          "title": "Steak frites / Onion soup",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Steak_frites_at_The_Bar_at_MacArthur_Place_in_Sonoma_-_Sarah_Stierch.jpg/1920px-Steak_frites_at_The_Bar_at_MacArthur_Place_in_Sonoma_-_Sarah_Stierch.jpg",
+          "description": "牛排薯条、洋葱汤、鸭腿、可丽饼都可以分散到几天吃；景点门口套餐不要作为首选。",
+          "caption": "法式经典"
         },
         {
           "kind": "甜点",
           "title": "Macaron / Pastry",
-          "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=82",
-          "description": "甜点不用一次买太多，适合每天试一点；茶、巧克力和小盒装点心也更适合作为伴手礼。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/90/Macaron_1.jpg",
+          "description": "甜点适合每天试一点，拍照也比大餐轻松；伴手礼优先选密封小盒装。",
+          "caption": "甜点"
+        },
+        {
+          "kind": "轻食",
+          "title": "Crêpe",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Crepes_dsc07085.jpg/1920px-Crepes_dsc07085.jpg",
+          "description": "可丽饼适合午后或夜游前补能；咸口 galette 比纯甜口更能当一餐。",
+          "caption": "轻食"
         }
       ],
       "sections": [
         {
-          "title": "景点",
-          "items": ["特罗卡德罗和塞纳河：拍开场照。", "卢浮宫：只抓重点路线。", "奥赛或橘园：更轻松的艺术下午。", "凡尔赛：宫殿、花园和特里亚农。"]
+          "title": "9/16 浪漫开场",
+          "items": [
+            "特罗卡德罗或塞纳河看铁塔，不强求登塔。",
+            "下午左岸咖啡，晚上圣日耳曼或玛黑区晚餐。",
+            "第一晚不安排不可退款门票，给航班延误和疲劳留余地。"
+          ]
         },
         {
-          "title": "美食",
-          "items": ["左岸小酒馆适合正式晚餐。", "可丽饼、法式早餐、热巧克力可以作为轻体验。", "热门餐厅提前订位。"]
+          "title": "9/17 博物馆日",
+          "items": [
+            "卢浮宫早场，控制在 3 小时以内。",
+            "午后奥赛或橘园二选一，不建议三馆连刷。",
+            "晚上塞纳河散步或游船，别再排重餐。"
+          ]
         },
         {
-          "title": "购买",
-          "items": ["药妆、香氛、茶、巧克力。", "博物馆商店买画册和丝巾。", "奢侈品先确认退税和国内差价。"]
+          "title": "9/18 凡尔赛日",
+          "items": [
+            "RER 往返要留交通缓冲。",
+            "宫殿、镜厅和花园是主线，特里亚农看体力。",
+            "回巴黎后吃轻松晚餐，第二天要飞威尼斯。"
+          ]
+        },
+        {
+          "title": "购物和避雷",
+          "items": [
+            "药妆先列清单，现场按需求买，不要被套装冲昏头。",
+            "博物馆商店买画册和丝巾比景区纪念品更稳。",
+            "奢侈品排队和退税时间要计入行程，不要压缩正景点。"
+          ]
         }
       ],
-      "tips": ["不要买来路不明的跳队票。", "地铁和景点周边手机、包放身前。"]
+      "tips": [
+        "卢浮宫、奥赛、凡尔赛都按官网确认闭馆日。",
+        "巴黎正式餐厅订位后留意取消规则。",
+        "地铁和景点周边背包放前面。"
+      ]
     },
     {
       "id": "paris-local-route",
@@ -280,12 +598,27 @@
         "vehicle": "●",
         "label": "Louvre → Orsay → Saint-Germain",
         "points": [
-          { "label": "卢浮宫", "lat": 48.8606, "lng": 2.3376 },
-          { "label": "奥赛", "lat": 48.86, "lng": 2.3266 },
-          { "label": "圣日耳曼", "lat": 48.853, "lng": 2.333 }
+          {
+            "label": "卢浮宫",
+            "lat": 48.8606,
+            "lng": 2.3376
+          },
+          {
+            "label": "奥赛",
+            "lat": 48.86,
+            "lng": 2.3266
+          },
+          {
+            "label": "圣日耳曼",
+            "lat": 48.853,
+            "lng": 2.333
+          }
         ]
       },
-      "tips": ["市内路线是旅行动线示意，不替代实时导航。", "巴黎地铁施工和罢工信息出发前一周再查。"]
+      "tips": [
+        "市内路线是旅行动线示意，不替代实时导航。",
+        "巴黎地铁施工和罢工信息出发前一周再查。"
+      ]
     },
     {
       "id": "paris-venice-flight",
@@ -304,11 +637,22 @@
         "vehicle": "✈",
         "label": "Paris → Venice",
         "points": [
-          { "label": "巴黎", "lat": 48.8566, "lng": 2.3522 },
-          { "label": "威尼斯", "lat": 45.4408, "lng": 12.3155 }
+          {
+            "label": "巴黎",
+            "lat": 48.8566,
+            "lng": 2.3522
+          },
+          {
+            "label": "威尼斯",
+            "lat": 45.4408,
+            "lng": 12.3155
+          }
         ]
       },
-      "tips": ["选 Venice Marco Polo 机场更方便进主岛。", "主岛酒店尽量靠近水上巴士站，减少拖箱过桥。"]
+      "tips": [
+        "选 Venice Marco Polo 机场更方便进主岛。",
+        "主岛酒店尽量靠近水上巴士站，减少拖箱过桥。"
+      ]
     },
     {
       "id": "italy-intro",
@@ -318,27 +662,117 @@
       "endDate": "2026-09-19",
       "eyebrow": "Italy / North to south",
       "title": "意大利：从水城到文艺复兴，再到罗马",
-      "summary": "意大利段按北到南：威尼斯 → 佛罗伦萨 → 罗马。城市间用高铁连接，减少机场和行李折腾。",
+      "summary": "意大利段按北到南顺路走：威尼斯看水路和岛屿，佛罗伦萨看文艺复兴和托斯卡纳味道，罗马用古迹和夜景收尾。城市间用高铁，减少机场、安检和行李折腾。",
       "background": {
-        "image": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=2200&q=82",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg/1920px-Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg",
         "tone": "day"
       },
       "images": [
-        "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=1200&q=82"
+        {
+          "kind": "威尼斯",
+          "title": "Grand Canal",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg/1920px-Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg",
+          "description": "水城主视觉。",
+          "caption": "威尼斯"
+        },
+        {
+          "kind": "佛罗伦萨",
+          "title": "Florence Duomo",
+          "image": "https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1400&q=82",
+          "description": "文艺复兴主视觉。",
+          "caption": "佛罗伦萨"
+        },
+        {
+          "kind": "罗马",
+          "title": "Colosseum",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1920px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg",
+          "description": "古迹压轴。",
+          "caption": "罗马"
+        }
       ],
       "sections": [
         {
-          "title": "风土人情",
-          "items": ["威尼斯看水路和岛屿。", "佛罗伦萨看文艺复兴和托斯卡纳。", "罗马用古迹和夜景压轴。"]
+          "title": "顺路交通",
+          "items": [
+            "9/19 巴黎飞威尼斯，尽量选 Marco Polo 机场。",
+            "9/21 Venezia Santa Lucia 到 Firenze SMN，高铁中途经过博洛尼亚。",
+            "9/23 Firenze SMN 到 Roma Termini，约 1.5 小时级别。"
+          ]
         },
         {
-          "title": "特产",
-          "items": ["Murano 玻璃、佛罗伦萨皮具、手工纸。", "咖啡豆、香氛、红酒、Marvis。"]
+          "title": "每城重点",
+          "items": [
+            "威尼斯：水路、圣马可、总督府、Murano/Burano 二选一。",
+            "佛罗伦萨：乌菲兹、圣母百花、老桥、米开朗基罗广场。",
+            "罗马：斗兽场、古罗马广场、梵蒂冈、喷泉夜游和特拉斯提弗列晚餐。"
+          ]
+        },
+        {
+          "title": "值得买",
+          "items": [
+            "威尼斯：有来源说明的 Murano 玻璃，小件优先。",
+            "佛罗伦萨：正规皮具、手工纸、香氛和文具。",
+            "罗马：咖啡豆、Marvis、梵蒂冈邮票和明信片。"
+          ]
+        },
+        {
+          "title": "避雷",
+          "items": [
+            "不要在火车站临时让陌生人帮忙买票或搬行李。",
+            "热门广场第一排餐厅通常为位置付费。",
+            "皮具、玻璃、金饰都要看产地、工艺和退换规则。"
+          ]
         }
       ],
-      "tips": ["高铁票优先看 Trenitalia 和 Italo 官方。", "意大利火车站和热门广场看好行李。"]
+      "tips": [
+        "高铁票优先 Trenitalia 和 Italo 官方。",
+        "固定车次早买便宜但弹性差，蜜月行程不要把换乘压太紧。",
+        "意大利火车站和热门广场看好行李。"
+      ],
+      "spotlight": [
+        {
+          "kind": "威尼斯",
+          "title": "Grand Canal / Rialto",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg/1920px-Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg",
+          "description": "到威尼斯先用 1 号水上巴士看大运河，比昂贵短程摆拍更能理解城市。",
+          "caption": "水城"
+        },
+        {
+          "kind": "威尼斯",
+          "title": "San Marco & Doge's Palace",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Saint_Mark%27s_Campanile_and_Palazzo_Ducale%2C_Venice%2C_September_2017_-2.jpg/1920px-Saint_Mark%27s_Campanile_and_Palazzo_Ducale%2C_Venice%2C_September_2017_-2.jpg",
+          "description": "圣马可和总督府适合清晨或夜晚，白天人流大，要提前看门票和安检时间。",
+          "caption": "地标"
+        },
+        {
+          "kind": "佛罗伦萨",
+          "title": "Uffizi / Duomo",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Florence_-_Uffizi_from_Arno.jpg/1920px-Florence_-_Uffizi_from_Arno.jpg",
+          "description": "佛罗伦萨重点是乌菲兹、圣母百花大教堂和阿诺河，不要把酒庄、比萨、五渔村都塞进来。",
+          "caption": "艺术"
+        },
+        {
+          "kind": "罗马",
+          "title": "Colosseum / Forum",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1920px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg",
+          "description": "罗马压轴看斗兽场、古罗马广场、梵蒂冈和喷泉夜游，门票都提前走官方或可信渠道。",
+          "caption": "古迹"
+        },
+        {
+          "kind": "特色美食",
+          "title": "Cicchetti / Bistecca / Carbonara",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Cicchetti_Venezia_%281%29.jpg/1920px-Cicchetti_Venezia_%281%29.jpg",
+          "description": "意大利每站吃法不同：威尼斯小食，佛罗伦萨牛排，罗马面食。不要每城都只吃披萨。",
+          "caption": "美食主线"
+        },
+        {
+          "kind": "购买",
+          "title": "Murano glass / Leather / Pharmacy",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/Murano_sunset.JPG/1920px-Murano_sunset.JPG",
+          "description": "值得买 Murano 玻璃、佛罗伦萨皮具、手工纸、Marvis、咖啡豆和小瓶香氛；大件谨慎。",
+          "caption": "购物"
+        }
+      ]
     },
     {
       "id": "venice-city",
@@ -350,67 +784,129 @@
       "title": "威尼斯：大运河、圣马可和岛屿",
       "summary": "主岛住两晚，第一天看大运河和里亚托，第二天看圣马可、总督府或 Murano/Burano。",
       "background": {
-        "image": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=2200&q=82",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg/1920px-Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg",
         "tone": "day"
       },
       "images": [
-        "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?auto=format&fit=crop&w=1200&q=82"
+        {
+          "kind": "水路",
+          "title": "Grand Canal",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg/1920px-Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg",
+          "description": "大运河和里亚托。",
+          "caption": "水路"
+        },
+        {
+          "kind": "地标",
+          "title": "San Marco",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/San_Marco_cathedral_in_Venice.JPG/1920px-San_Marco_cathedral_in_Venice.JPG",
+          "description": "圣马可大教堂。",
+          "caption": "地标"
+        },
+        {
+          "kind": "岛屿",
+          "title": "Burano",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Burano_Venice_17.jpg/1920px-Burano_Venice_17.jpg",
+          "description": "彩色岛。",
+          "caption": "岛屿"
+        }
       ],
       "spotlight": [
         {
           "kind": "地标",
-          "title": "San Marco & Doge's Palace",
-          "image": "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1200&q=82",
-          "description": "圣马可广场、圣马可大教堂和总督府适合清晨或夜晚看；白天人流大，门票和安检时间要提前留。"
+          "title": "San Marco Basilica",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/San_Marco_cathedral_in_Venice.JPG/1920px-San_Marco_cathedral_in_Venice.JPG",
+          "description": "圣马可大教堂适合清晨或预约时段进入；外观、广场和钟楼可以分开看，不要挤在中午人潮里。",
+          "caption": "地标"
         },
         {
-          "kind": "博物馆",
-          "title": "Peggy Guggenheim Collection",
-          "image": "https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?auto=format&fit=crop&w=1200&q=82",
-          "description": "Dorsoduro 区更安静，现代艺术馆和运河边散步可以作为圣马可之后的降噪安排。"
+          "kind": "宫殿",
+          "title": "Doge's Palace",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d1/Saint_Mark%27s_Campanile_and_Palazzo_Ducale%2C_Venice%2C_September_2017_-2.jpg/1920px-Saint_Mark%27s_Campanile_and_Palazzo_Ducale%2C_Venice%2C_September_2017_-2.jpg",
+          "description": "总督府、叹息桥和海边立面是威尼斯最完整的历史线。若买联票，留足安检和参观时间。",
+          "caption": "宫殿"
         },
         {
           "kind": "体验",
           "title": "Grand Canal by Vaporetto",
-          "image": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1200&q=82",
-          "description": "坐 1 号水上巴士从大运河慢慢看城市，比昂贵的短程摆拍更能理解威尼斯。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg/1920px-Panorama_of_Canal_Grande_and_Ponte_di_Rialto%2C_Venice_-_September_2017.jpg",
+          "description": "坐 1 号水上巴士从大运河慢慢看城市，比短程贡多拉更实用，也更适合抵达第一天建立方向感。",
+          "caption": "体验"
+        },
+        {
+          "kind": "博物馆",
+          "title": "Peggy Guggenheim Collection",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/PI5DAE~2_-_CopyPeggy_Guggenheim_Museum.JPG",
+          "description": "Dorsoduro 区更安静，现代艺术馆和运河边散步可以作为圣马可之后的降噪安排。",
+          "caption": "博物馆"
         },
         {
           "kind": "餐厅",
           "title": "Cantina Do Spade",
-          "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=82",
-          "description": "适合体验 Bacaro 小酒馆和 Cicchetti；如果想坐下来吃晚餐，尽量提前确认营业和订位。"
+          "image": "https://cantinadospade.com/wp/wp-content/uploads/2021/07/Piatti_Cantina-Do-Spade_10.jpg",
+          "description": "Rialto 附近的 Bacaro / 餐厅候选，适合体验小食和海鲜。热门时段提前确认订位和营业时间。",
+          "caption": "餐厅候选"
         },
         {
           "kind": "特色美食",
-          "title": "Cicchetti / Sarde in Saor",
-          "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=82",
-          "description": "小食配一杯酒是威尼斯最轻松的吃法；海鲜、腌沙丁鱼和墨鱼面都值得试。"
+          "title": "Cicchetti",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Cicchetti_Venezia_%281%29.jpg/1920px-Cicchetti_Venezia_%281%29.jpg",
+          "description": "威尼斯小食适合午后或晚餐前，配一杯酒就很本地；两个人可以多点几款分享。",
+          "caption": "小食"
         },
         {
-          "kind": "避雷",
-          "title": "San Marco 第一排餐厅",
-          "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=82",
-          "description": "圣马可广场第一排座位通常为景观买单，附加费和音乐费要看清；想吃好一点可以往里走几条街。"
+          "kind": "特色美食",
+          "title": "Sarde in Saor",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Sarde_in_saor_dans_un_restaurant_v%C3%A9nitien_%28d%C3%A9cembre_2022%29.JPG/1920px-Sarde_in_saor_dans_un_restaurant_v%C3%A9nitien_%28d%C3%A9cembre_2022%29.JPG",
+          "description": "酸甜洋葱腌沙丁鱼是威尼斯经典，不一定每个人都爱，但很值得点一份尝试。",
+          "caption": "本地菜"
+        },
+        {
+          "kind": "特色美食",
+          "title": "Risotto al nero di seppia",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Risotto_al_nero_di_seppia.jpg/1920px-Risotto_al_nero_di_seppia.jpg",
+          "description": "墨鱼汁饭或墨鱼面主体明确，拍照不一定好看，但味道很有威尼斯记忆。",
+          "caption": "墨鱼汁"
         }
       ],
       "sections": [
         {
-          "title": "景点",
-          "items": ["大运河：坐 1 号水上巴士看城市。", "圣马可广场：清晨和夜晚都好看。", "Murano 或 Burano：玻璃和彩色房子二选一。"]
+          "title": "主岛动线",
+          "items": [
+            "抵达后先走酒店到水上巴士站的路线，确认过桥数量。",
+            "大运河 1 号水上巴士适合第一段城市认识。",
+            "圣马可广场安排清晨或晚上，白天只做入场参观。"
+          ]
+        },
+        {
+          "title": "博物馆和岛屿",
+          "items": [
+            "总督府适合和圣马可大教堂同一天。",
+            "Peggy Guggenheim 适合想避开人潮的下午。",
+            "Murano 看玻璃，Burano 看彩色房子，时间不够二选一。"
+          ]
         },
         {
           "title": "美食",
-          "items": ["Cicchetti 小食配一杯酒。", "海鲜意面和墨鱼面。", "避开圣马可广场第一排高价餐厅。"]
+          "items": [
+            "Cicchetti 小食、Sarde in saor、墨鱼汁饭/面、海鲜意面。",
+            "Bacaro 适合轻松吃，正式晚餐要提前订。",
+            "圣马可第一排餐厅先看附加费和音乐费。"
+          ]
         },
         {
-          "title": "购买",
-          "items": ["有来源说明的 Murano 玻璃。", "手工纸、面具、小型玻璃饰品。"]
+          "title": "购买和避雷",
+          "items": [
+            "Murano 玻璃要看来源说明，太便宜的大概率不是本地手工。",
+            "面具和玻璃适合买小件，方便携带也不易碎。",
+            "贡多拉价格和路线先谈清楚，不要上船后再问。"
+          ]
         }
       ],
-      "tips": ["酒店位置比房间大小更重要，少过桥就是省体力。", "贡多拉价格和路线先谈清楚。"]
+      "tips": [
+        "主岛酒店尽量靠近水上巴士站，少过桥就是省体力。",
+        "餐厅和水上巴士班次出发前一天再查。",
+        "雨天和涨水时鞋子要能防滑。"
+      ]
     },
     {
       "id": "venice-florence-train",
@@ -429,12 +925,28 @@
         "vehicle": "◆",
         "label": "Venezia S. Lucia → Firenze SMN",
         "points": [
-          { "label": "威尼斯", "lat": 45.4408, "lng": 12.3155 },
-          { "label": "博洛尼亚", "lat": 44.4949, "lng": 11.3426 },
-          { "label": "佛罗伦萨", "lat": 43.7696, "lng": 11.2558 }
+          {
+            "label": "威尼斯",
+            "lat": 45.4408,
+            "lng": 12.3155
+          },
+          {
+            "label": "博洛尼亚",
+            "lat": 44.4949,
+            "lng": 11.3426
+          },
+          {
+            "label": "佛罗伦萨",
+            "lat": 43.7696,
+            "lng": 11.2558
+          }
         ]
       },
-      "tips": ["买票渠道：Trenitalia.com 或 Italotreno.com。", "上车前看电子屏确认站台；放行李时不要离开视线。", "固定车次早买通常更便宜，但改签弹性更差。"]
+      "tips": [
+        "买票渠道：Trenitalia.com 或 Italotreno.com。",
+        "上车前看电子屏确认站台；放行李时不要离开视线。",
+        "固定车次早买通常更便宜，但改签弹性更差。"
+      ]
     },
     {
       "id": "florence-city",
@@ -446,67 +958,122 @@
       "title": "佛罗伦萨：乌菲兹、老桥和托斯卡纳味道",
       "summary": "周一抵达只看老城和日落，周二安排乌菲兹和牛排晚餐。想更浪漫可以把下午换成托斯卡纳酒庄。",
       "background": {
-        "image": "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?auto=format&fit=crop&w=2200&q=82",
+        "image": "https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1400&q=82",
         "tone": "golden"
       },
       "images": [
-        "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?auto=format&fit=crop&w=1200&q=82"
+        {
+          "kind": "教堂",
+          "title": "Duomo",
+          "image": "https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1400&q=82",
+          "description": "圣母百花大教堂。",
+          "caption": "教堂"
+        },
+        {
+          "kind": "博物馆",
+          "title": "Uffizi",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Florence_-_Uffizi_from_Arno.jpg/1920px-Florence_-_Uffizi_from_Arno.jpg",
+          "description": "乌菲兹美术馆。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "美食",
+          "title": "Bistecca",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Bistecca_alla_fiorentina-01.jpg",
+          "description": "佛罗伦萨牛排。",
+          "caption": "美食"
+        }
       ],
       "spotlight": [
         {
           "kind": "博物馆",
           "title": "Uffizi Galleries",
-          "image": "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?auto=format&fit=crop&w=1200&q=82",
-          "description": "佛罗伦萨最核心的美术馆，波提切利、达芬奇和文艺复兴主线集中；预约早场，别和爬穹顶硬塞同一天。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Florence_-_Uffizi_from_Arno.jpg/1920px-Florence_-_Uffizi_from_Arno.jpg",
+          "description": "佛罗伦萨最核心的美术馆，波提切利、达芬奇和文艺复兴主线集中；预约早场，别和爬穹顶硬塞同一天。",
+          "caption": "博物馆"
         },
         {
           "kind": "教堂",
           "title": "Duomo & Brunelleschi Dome",
-          "image": "https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1200&q=82",
-          "description": "圣母百花大教堂外观足够震撼；如果要登穹顶，时间和体力都要单独预留。"
+          "image": "https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1400&q=82",
+          "description": "圣母百花大教堂外观足够震撼；如果要登穹顶，时间和体力都要单独预留。",
+          "caption": "教堂"
         },
         {
           "kind": "日落",
           "title": "Piazzale Michelangelo",
-          "image": "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?auto=format&fit=crop&w=1200&q=82",
-          "description": "看阿诺河和城市天际线的经典位置；日落前 40 分钟抵达更稳，返程可散步下山。"
+          "image": "https://images.unsplash.com/photo-1518098268026-4e89f1a2cd8e?auto=format&fit=crop&w=1400&q=82",
+          "description": "看阿诺河和城市天际线的经典位置；日落前 40 分钟抵达更稳，返程可散步下山。",
+          "caption": "日落"
         },
         {
           "kind": "餐厅",
           "title": "Trattoria Antico Fattore",
-          "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=82",
-          "description": "老派托斯卡纳餐厅，适合安排 Bistecca alla Fiorentina；牛排按重量计价，点餐前问清熟度和份量。"
+          "image": "https://www.anticofattore.it/images/fasciaHome.jpg",
+          "description": "乌菲兹附近的历史餐厅候选，适合安排托斯卡纳晚餐；牛排按重量计价，点餐前问清熟度和份量。",
+          "caption": "餐厅候选"
         },
         {
           "kind": "特色美食",
-          "title": "Bistecca / Ribollita",
-          "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=82",
-          "description": "佛罗伦萨牛排适合两人分享，Ribollita 和 Pappa al pomodoro 更本地；别只把胃留给网红三明治。"
+          "title": "Bistecca alla Fiorentina",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/1/12/Bistecca_alla_fiorentina-01.jpg",
+          "description": "佛罗伦萨牛排适合两人分享，通常按重量计价。别点太多前菜，否则主菜会吃不下。",
+          "caption": "牛排"
+        },
+        {
+          "kind": "特色美食",
+          "title": "Ribollita / Pappa al pomodoro",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Ribollita.jpg",
+          "description": "托斯卡纳蔬菜面包汤和番茄面包汤更本地，适合和牛排形成轻重搭配。",
+          "caption": "托斯卡纳"
         },
         {
           "kind": "甜点",
           "title": "Gelato",
-          "image": "https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1200&q=82",
-          "description": "看颜色和质地，过度鲜艳、堆得很高的冰淇淋通常不优先；饭后散步时买一小份就好。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Coppette_gelato.jpg/1920px-Coppette_gelato.jpg",
+          "description": "看颜色和质地，过度鲜艳、堆得很高的冰淇淋通常不优先；饭后散步时买一小份就好。",
+          "caption": "Gelato"
         }
       ],
       "sections": [
         {
-          "title": "景点",
-          "items": ["圣母百花大教堂外观。", "乌菲兹美术馆。", "米开朗基罗广场日落。", "老桥和阿诺河。"]
+          "title": "9/21 抵达日",
+          "items": [
+            "火车到 Firenze SMN 后先回酒店放行李。",
+            "下午只看老桥、阿诺河和大教堂外观。",
+            "日落去米开朗基罗广场，晚餐不要订太早。"
+          ]
+        },
+        {
+          "title": "9/22 艺术日",
+          "items": [
+            "乌菲兹预约早场，控制在 2.5-3 小时。",
+            "午后大教堂区域和手工纸店，别再塞另一个大型博物馆。",
+            "晚上安排托斯卡纳餐厅和牛排。"
+          ]
         },
         {
           "title": "美食",
-          "items": ["佛罗伦萨 T 骨牛排适合两人分享。", "托斯卡纳红酒和橄榄油。", "Gelato 不要只看排队，先看口味和颜色是否自然。"]
+          "items": [
+            "Bistecca alla Fiorentina 两人分享，问清重量、熟度和价格。",
+            "Ribollita、Pappa al pomodoro、Cantucci + Vin Santo 可作为本地补充。",
+            "Gelato 看自然颜色和金属盖桶，不只看排队。"
+          ]
         },
         {
-          "title": "购买",
-          "items": ["正规皮具、手工纸、香氛和文具。", "老桥金饰谨慎购买，先比较工艺和价格。"]
+          "title": "购买和避雷",
+          "items": [
+            "正规皮具、手工纸、香氛和文具值得看。",
+            "老桥金饰谨慎购买，先比较工艺和价格。",
+            "酒庄日不要自驾，限行区和酒驾风险都不值得。"
+          ]
         }
       ],
-      "tips": ["乌菲兹普通闭馆日是周一，具体仍以官网为准。", "酒庄日不要自驾，限行区和酒驾风险都不值得。"]
+      "tips": [
+        "乌菲兹普通闭馆日是周一，具体以官网为准。",
+        "佛罗伦萨老城 ZTL 限行严格，不建议自驾进城。",
+        "牛排餐厅热门时段要订位。"
+      ]
     },
     {
       "id": "florence-rome-train",
@@ -525,11 +1092,22 @@
         "vehicle": "◆",
         "label": "Firenze SMN → Roma Termini",
         "points": [
-          { "label": "佛罗伦萨", "lat": 43.7696, "lng": 11.2558 },
-          { "label": "罗马", "lat": 41.9028, "lng": 12.4964 }
+          {
+            "label": "佛罗伦萨",
+            "lat": 43.7696,
+            "lng": 11.2558
+          },
+          {
+            "label": "罗马",
+            "lat": 41.9028,
+            "lng": 12.4964
+          }
         ]
       },
-      "tips": ["买票渠道：Trenitalia.com 或 Italotreno.com。", "车站扒手高发，上下车和找座时看好手机和包。"]
+      "tips": [
+        "买票渠道：Trenitalia.com 或 Italotreno.com。",
+        "车站扒手高发，上下车和找座时看好手机和包。"
+      ]
     },
     {
       "id": "rome-city",
@@ -541,67 +1119,129 @@
       "title": "罗马：古迹、梵蒂冈和最后的夜晚",
       "summary": "罗马停 3 晚作为压轴。先用喷泉夜景开场，再看斗兽场、古罗马广场和梵蒂冈，最后一晚留给特拉斯提弗列。",
       "background": {
-        "image": "https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=2200&q=82",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1920px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg",
         "tone": "golden"
       },
       "images": [
-        "https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=82",
-        "https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1200&q=82"
+        {
+          "kind": "古迹",
+          "title": "Colosseum",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1920px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg",
+          "description": "斗兽场。",
+          "caption": "古迹"
+        },
+        {
+          "kind": "博物馆",
+          "title": "Vatican Museums",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Vatican_Museums_Spiral_Staircase_2012.jpg/1920px-Vatican_Museums_Spiral_Staircase_2012.jpg",
+          "description": "梵蒂冈博物馆。",
+          "caption": "博物馆"
+        },
+        {
+          "kind": "美食",
+          "title": "Carbonara",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/1920px-Espaguetis_carbonara.jpg",
+          "description": "罗马面食。",
+          "caption": "美食"
+        }
       ],
       "spotlight": [
         {
           "kind": "古迹",
           "title": "Colosseum & Roman Forum",
-          "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1200&q=82",
-          "description": "斗兽场、古罗马广场和帕拉蒂尼山最好半天一起看；实名票和入场时段要提前核对。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Colosseum_in_Rome%2C_Italy_-_April_2007.jpg/1920px-Colosseum_in_Rome%2C_Italy_-_April_2007.jpg",
+          "description": "斗兽场、古罗马广场和帕拉蒂尼山最好半天一起看；实名票和入场时段要提前核对。",
+          "caption": "古迹"
+        },
+        {
+          "kind": "古迹",
+          "title": "Roman Forum / Palatine",
+          "image": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1400&q=82",
+          "description": "古罗马广场信息量很大，建议提前看一条导览路线，否则现场容易变成“看石头”。",
+          "caption": "古迹"
         },
         {
           "kind": "博物馆",
           "title": "Vatican Museums",
-          "image": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1200&q=82",
-          "description": "梵蒂冈博物馆和西斯廷礼拜堂信息量很大，第一次去可以考虑官方导览；着装和入场时间要严格。"
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Vatican_Museums_Spiral_Staircase_2012.jpg/1920px-Vatican_Museums_Spiral_Staircase_2012.jpg",
+          "description": "梵蒂冈博物馆和西斯廷礼拜堂信息量很大，第一次去可以考虑官方导览；着装和入场时间要严格。",
+          "caption": "博物馆"
         },
         {
           "kind": "夜游",
           "title": "Pantheon / Trevi / Navona",
-          "image": "https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=1200&q=82",
-          "description": "罗马最后几晚适合把喷泉、万神殿和纳沃纳广场串成夜游线；人多处手机和包放身前。"
+          "image": "https://images.unsplash.com/photo-1529260830199-42c24126f198?auto=format&fit=crop&w=1400&q=82",
+          "description": "罗马最后几晚适合把喷泉、万神殿和纳沃纳广场串成夜游线；人多处手机和包放身前。",
+          "caption": "夜游"
         },
         {
           "kind": "餐厅",
-          "title": "Roscioli",
-          "image": "https://images.unsplash.com/photo-1481931098730-318b6f776db0?auto=format&fit=crop&w=1200&q=82",
-          "description": "适合把罗马面食、熟食和酒单作为一顿正式体验；热门程度高，能订就提前订。"
+          "title": "Rimessa Roscioli / Roscioli",
+          "image": "https://rimessaroscioli.com/wp-content/uploads/2024/07/MAU01743-kd.jpg",
+          "description": "适合把罗马面食、熟食、葡萄酒和甜点作为一顿正式体验；热门程度高，能订就提前订。",
+          "caption": "餐厅候选"
         },
         {
           "kind": "特色美食",
-          "title": "Carbonara / Cacio e Pepe",
-          "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1200&q=82",
-          "description": "罗马面食重点吃 Carbonara、Amatriciana、Cacio e pepe；奶油版 Carbonara 可以直接避开。"
+          "title": "Carbonara / Amatriciana",
+          "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Espaguetis_carbonara.jpg/1920px-Espaguetis_carbonara.jpg",
+          "description": "罗马面食重点吃 Carbonara、Amatriciana、Cacio e pepe；奶油版 Carbonara 可以直接避开。",
+          "caption": "Carbonara"
+        },
+        {
+          "kind": "特色美食",
+          "title": "Cacio e Pepe",
+          "image": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=1400&q=82",
+          "description": "黑胡椒、羊奶酪和面本身就是主角，简单但很看火候。适合和 Carbonara 分开两餐吃。",
+          "caption": "Cacio e pepe"
         },
         {
           "kind": "轻食",
-          "title": "Pizza al Taglio / Espresso",
-          "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1200&q=82",
-          "description": "披萨切片适合午间补能，站着喝咖啡更本地也更便宜；景点门口套餐不要作为首选。"
+          "title": "Pizza al taglio / Espresso",
+          "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1400&q=82",
+          "description": "披萨切片适合午间补能，站着喝咖啡更本地也更便宜；景点门口套餐不要作为首选。",
+          "caption": "轻食"
         }
       ],
       "sections": [
         {
-          "title": "景点",
-          "items": ["斗兽场和古罗马广场。", "梵蒂冈博物馆和圣彼得。", "特莱维喷泉、万神殿、纳沃纳广场夜游。"]
+          "title": "9/23 抵达日",
+          "items": [
+            "火车到 Roma Termini 后先去酒店，不拖箱夜游。",
+            "傍晚走万神殿、纳沃纳广场、特莱维喷泉。",
+            "第一晚吃罗马面食，不安排重门票。"
+          ]
         },
         {
-          "title": "美食",
-          "items": ["Carbonara、Amatriciana、Cacio e pepe。", "特拉斯提弗列适合最后一晚晚餐。", "咖啡站着喝更本地，也更便宜。"]
+          "title": "9/24 古罗马日",
+          "items": [
+            "斗兽场、古罗马广场、帕拉蒂尼山半天。",
+            "下午留给酒店休息或 Capitoline Hill 周边。",
+            "晚上特拉斯提弗列晚餐，提前订或早去。"
+          ]
         },
         {
-          "title": "购买",
-          "items": ["咖啡豆、Marvis、香氛、皮具小物。", "梵蒂冈官方商店可买明信片和邮票。"]
+          "title": "9/25 梵蒂冈日",
+          "items": [
+            "梵蒂冈博物馆和西斯廷礼拜堂提前买官方票。",
+            "圣彼得大教堂看体力和排队情况。",
+            "最后一晚不要排太远的餐厅，返程前留整理行李时间。"
+          ]
+        },
+        {
+          "title": "购买和避雷",
+          "items": [
+            "咖啡豆、Marvis、香氛、皮具小物、梵蒂冈邮票和明信片适合带回。",
+            "Termini、喷泉、斗兽场周边防扒手。",
+            "斗兽场和梵蒂冈票务优先官方或可信渠道，远离仿冒票务站。"
+          ]
         }
       ],
-      "tips": ["宗教场所注意着装。", "Termini、喷泉、斗兽场周边防扒手。", "斗兽场和梵蒂冈票务优先官方或可信渠道。"]
+      "tips": [
+        "宗教场所注意肩膀和膝盖遮挡。",
+        "斗兽场实名票和入场时段要和护照信息一致。",
+        "退税商品返程前不要先托运，海关可能要求查看实物。"
+      ]
     },
     {
       "id": "return-flight",
@@ -620,12 +1260,28 @@
         "vehicle": "✈",
         "label": "假数据 · 罗马返程",
         "points": [
-          { "label": "罗马", "lat": 41.8003, "lng": 12.2389 },
-          { "label": "伊斯坦布尔中转", "lat": 41.2753, "lng": 28.7519 },
-          { "label": "北京", "lat": 39.9042, "lng": 116.4074 }
+          {
+            "label": "罗马",
+            "lat": 41.8003,
+            "lng": 12.2389
+          },
+          {
+            "label": "伊斯坦布尔中转",
+            "lat": 41.2753,
+            "lng": 28.7519
+          },
+          {
+            "label": "北京",
+            "lat": 39.9042,
+            "lng": 116.4074
+          }
         ]
       },
-      "tips": ["退税商品不要先托运，海关可能要求查看实物。", "Fiumicino 机场国际航班建议更早到。", "返程日不安排硬景点。"]
+      "tips": [
+        "退税商品不要先托运，海关可能要求查看实物。",
+        "Fiumicino 机场国际航班建议更早到。",
+        "返程日不安排硬景点。"
+      ]
     }
   ],
   "sources": [
@@ -688,6 +1344,46 @@
       "label": "MICHELIN Guide - Roscioli",
       "url": "https://guide.michelin.com/us/en/lazio/roma/restaurant/roscioli",
       "note": "罗马餐厅候选复核。"
+    },
+    {
+      "label": "Wikimedia Commons",
+      "url": "https://commons.wikimedia.org/",
+      "note": "页面中地标、博物馆和菜品实景图片来源之一。"
+    },
+    {
+      "label": "Official Meatballs for the People",
+      "url": "https://meatball.se/",
+      "note": "斯德哥尔摩餐厅候选、地址和订位复核。"
+    },
+    {
+      "label": "Le Comptoir du Relais - Michelin Guide",
+      "url": "https://guide.michelin.com/gb/en/ile-de-france/paris/restaurant/le-comptoir-du-relais",
+      "note": "巴黎餐厅候选地址和餐厅信息复核。"
+    },
+    {
+      "label": "Cantina Do Spade",
+      "url": "https://cantinadospade.com/",
+      "note": "威尼斯 Bacaro / 餐厅候选复核。"
+    },
+    {
+      "label": "Antico Fattore",
+      "url": "https://www.anticofattore.it/en/",
+      "note": "佛罗伦萨托斯卡纳餐厅候选复核。"
+    },
+    {
+      "label": "Rimessa Roscioli",
+      "url": "https://rimessaroscioli.com/restaurant/",
+      "note": "罗马 Roscioli 系餐厅候选复核。"
+    },
+    {
+      "label": "Vatican Museums Official Ticket Office",
+      "url": "https://tickets.museivaticani.va/",
+      "note": "梵蒂冈博物馆官方票务复核。"
+    },
+    {
+      "label": "Palace of Versailles",
+      "url": "https://en.chateauversailles.fr/plan-your-visit/tickets-and-prices",
+      "note": "凡尔赛门票和开放信息复核。"
     }
   ]
 }

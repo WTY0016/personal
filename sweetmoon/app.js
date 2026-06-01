@@ -12,6 +12,8 @@
     vehicleMarker: null,
     activeBackgroundLayer: 0,
     visibleStageType: null,
+    mediaGroup: null,
+    mediaGroupKey: null,
     ticking: false
   };
 
@@ -265,14 +267,13 @@
       elements.stagePanel.dataset.stageMode = isTransport ? scene.mode : scene.type;
       elements.stageKicker.textContent = scene.eyebrow;
       elements.stageTitle.textContent = scene.title;
-      elements.stageMap.classList.toggle("is-visible", nextType === "map");
-      elements.stageMedia.classList.toggle("is-visible", nextType === "media");
+      elements.stageMap.classList.add("is-visible");
+      elements.stageMedia.classList.add("is-visible");
 
       if (isTransport) {
         renderRoute(scene);
       } else {
-        clearRouteLayers();
-        renderMedia(scene);
+        renderMedia(state.activeIndex);
       }
 
       state.visibleStageType = nextType;
@@ -280,6 +281,7 @@
         elements.stageContent.classList.remove("is-switching");
         elements.stagePanel.classList.remove("is-switching");
         updateActiveStageProgress();
+        updateStageLayerBlend();
       });
     };
 
@@ -374,17 +376,55 @@
     const progress = routeSceneProgress(state.activeIndex);
     if (scene.type === "transport" && scene.map) {
       updateRouteProgress(scene, progress);
+      updateStageLayerBlend();
       return;
     }
 
-    updateMediaProgress(progress);
+    updateMediaProgress();
+    updateStageLayerBlend();
   }
 
-  function updateMediaProgress(progress) {
-    if (!elements.stageMedia.classList.contains("is-visible")) return;
+  function updateMediaProgress() {
+    if (!state.mediaGroup) return;
     const maxScroll = elements.stageMedia.scrollHeight - elements.stageMedia.clientHeight;
     if (maxScroll <= 0) return;
-    elements.stageMedia.scrollTop = maxScroll * progress;
+    elements.stageMedia.scrollTop = maxScroll * mediaGroupProgress(state.mediaGroup);
+  }
+
+  function updateStageLayerBlend() {
+    const scene = state.data?.scenes[state.activeIndex];
+    if (!scene) return;
+
+    const currentType = stageType(scene);
+    const previousScene = state.data.scenes[state.activeIndex - 1];
+    const previousType = previousScene ? stageType(previousScene) : currentType;
+    const entryProgress = previousType !== currentType ? sceneEntryBlendProgress(state.activeIndex) : 1;
+
+    let mapOpacity = currentType === "map" ? 1 : 0;
+    let mediaOpacity = currentType === "media" ? 1 : 0;
+
+    if (previousType !== currentType) {
+      mapOpacity = currentType === "map" ? entryProgress : 1 - entryProgress;
+      mediaOpacity = currentType === "media" ? entryProgress : 1 - entryProgress;
+    }
+
+    applyStageLayerVisual(elements.stageMap, mapOpacity);
+    applyStageLayerVisual(elements.stageMedia, mediaOpacity);
+  }
+
+  function applyStageLayerVisual(element, opacity) {
+    const eased = clamp(opacity, 0, 1);
+    element.style.opacity = eased.toFixed(3);
+    element.style.transform = `translateY(${(1 - eased) * 10}px) scale(${0.992 + eased * 0.008})`;
+    element.style.filter = eased < 0.995 ? `blur(${(1 - eased) * 2}px)` : "none";
+  }
+
+  function sceneEntryBlendProgress(index) {
+    const sceneElement = document.querySelector(`[data-scene-index="${index}"]`);
+    if (!sceneElement) return 1;
+
+    const distance = window.innerHeight * (isCoarsePointer() ? 0.124 : 0.1);
+    return clamp((scrollTriggerLine() - sceneElement.getBoundingClientRect().top) / distance, 0, 1);
   }
 
   function routeSceneProgress(index) {
@@ -531,10 +571,31 @@
     state.vehicleMarker = null;
   }
 
-  function renderMedia(scene) {
+  function renderMedia(index) {
+    const group = mediaGroupForIndex(index);
+    const key = `${group.start}-${group.end}`;
+    if (state.mediaGroupKey === key) {
+      state.mediaGroup = group;
+      return;
+    }
+
+    elements.stageMedia.innerHTML = state.data.scenes
+      .slice(group.start, group.end + 1)
+      .map((scene, offset) => `
+        <section class="stage-media-scene" data-stage-media-index="${group.start + offset}">
+          ${mediaSceneMarkup(scene)}
+        </section>
+      `).join("");
+    elements.stageMedia.scrollTop = 0;
+    state.mediaGroup = group;
+    state.mediaGroupKey = key;
+    restartMediaReveal();
+  }
+
+  function mediaSceneMarkup(scene) {
     const media = sceneMedia(scene);
     const lead = media[0];
-    const supporting = media.slice(1, 4);
+    const supporting = media.slice(1, 7);
     const highlights = Array.isArray(scene.spotlight) && scene.spotlight.length > 0 ? `
       <div class="stage-highlights">
         ${scene.spotlight.map((item) => stageHighlightMarkup(item)).join("")}
@@ -557,7 +618,7 @@
       </div>
     ` : "";
 
-    elements.stageMedia.innerHTML = `
+    return `
       <div class="stage-media-grid">
         <figure class="media-hero">
           <img src="${escapeAttribute(lead.image)}" alt="${escapeAttribute(lead.title)}" loading="lazy" decoding="async">
@@ -571,7 +632,7 @@
           ${supporting.map((item) => `
             <figure>
               <img src="${escapeAttribute(item.image)}" alt="${escapeAttribute(item.title)}" loading="lazy" decoding="async">
-              <figcaption>${escapeHtml(item.title)}</figcaption>
+              ${item.caption ? `<figcaption>${escapeHtml(item.caption)}</figcaption>` : ""}
             </figure>
           `).join("")}
         </div>
@@ -581,8 +642,39 @@
       ${sections}
       ${tips}
     `;
-    elements.stageMedia.scrollTop = 0;
-    restartMediaReveal();
+  }
+
+  function mediaGroupForIndex(index) {
+    let start = index;
+    let end = index;
+    while (start > 0 && stageType(state.data.scenes[start - 1]) === "media") {
+      start -= 1;
+    }
+    while (end < state.data.scenes.length - 1 && stageType(state.data.scenes[end + 1]) === "media") {
+      end += 1;
+    }
+
+    return { start, end };
+  }
+
+  function mediaGroupProgress(group) {
+    const firstScene = document.querySelector(`[data-scene-index="${group.start}"]`);
+    const lastScene = document.querySelector(`[data-scene-index="${group.end}"]`);
+    if (!firstScene || !lastScene) return 0;
+
+    const firstRect = firstScene.getBoundingClientRect();
+    const lastRect = lastScene.getBoundingClientRect();
+    const groupTop = firstRect.top;
+    const groupHeight = Math.max(lastRect.bottom - groupTop, 1);
+    const startLine = progressStartLine(group.start);
+    const endLine = progressEndLine(group.end);
+    const distance = Math.max(groupHeight + startLine - endLine, 1);
+
+    return clamp((startLine - groupTop) / distance, 0, 1);
+  }
+
+  function stageType(scene) {
+    return scene?.type === "transport" ? "map" : "media";
   }
 
   function restartMediaReveal() {
@@ -593,20 +685,24 @@
 
   function sceneMedia(scene) {
     if (Array.isArray(scene.spotlight) && scene.spotlight.length > 0) {
-      return scene.spotlight.map((item) => ({
+      return scene.spotlight.map((item, index) => ({
         image: item.image,
         kind: item.kind || "推荐",
         title: item.title || scene.title,
-        description: item.description || ""
+        description: item.description || "",
+        caption: item.caption || (index === 0 ? "" : item.kind || "")
       }));
     }
 
-    return (scene.images || [scene.background.image]).map((image, index) => ({
-      image,
-      kind: scene.mode || scene.type || "推荐",
-      title: index === 0 ? scene.title : `${scene.title} ${index + 1}`,
-      description: index === 0 ? scene.summary : ""
-    }));
+    return (scene.images || [scene.background.image]).map((item, index) => {
+      const image = typeof item === "string" ? item : item.image;
+      const kind = typeof item === "string" ? scene.mode || scene.type || "推荐" : item.kind || scene.mode || scene.type || "推荐";
+      const title = typeof item === "string" ? scene.title : item.title || scene.title;
+      const description = typeof item === "string" && index === 0 ? scene.summary : item.description || "";
+      const caption = typeof item === "string" ? (index === 0 ? "" : kind) : item.caption || (index === 0 ? "" : kind);
+
+      return { image, kind, title, description, caption };
+    });
   }
 
   function highlightMarkup(item) {
