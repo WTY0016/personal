@@ -1,0 +1,1120 @@
+{
+  "meta": {
+    "title": "Sweetmoon under Stars",
+    "subtitle": "北京出发，法国、瑞典、意大利 15 天蜜月旅行攻略",
+    "dateRange": "2026-09-12 至 2026-09-26",
+    "route": "北京 → 斯德哥尔摩 → 巴黎 → 威尼斯 → 佛罗伦萨 → 罗马 → 北京",
+    "lastUpdated": "2026-06-01"
+  },
+  "routeSummary": [
+    {
+      "title": "北欧开场更顺路",
+      "text": "先飞到最北的斯德哥尔摩，把群岛、老城和北欧设计作为清爽开场，然后一路往西南和南欧移动。"
+    },
+    {
+      "title": "巴黎放在中段承接浪漫",
+      "text": "从斯德哥尔摩飞巴黎，停 4 晚看塞纳河、卢浮宫、奥赛和凡尔赛，行程节奏不需要折返。"
+    },
+    {
+      "title": "意大利按北到南坐高铁",
+      "text": "从威尼斯进入意大利，依次到佛罗伦萨、罗马，沿 Trenitalia 高铁主干线南下，最后从罗马返程更稳。"
+    }
+  ],
+  "routeStops": [
+    {
+      "id": "beijing",
+      "city": "北京",
+      "country": "China",
+      "lat": 39.9042,
+      "lng": 116.4074,
+      "dateRange": "9/12",
+      "nights": 0
+    },
+    {
+      "id": "stockholm",
+      "city": "斯德哥尔摩",
+      "country": "Sweden",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "dateRange": "9/12-9/15",
+      "nights": 3
+    },
+    {
+      "id": "paris",
+      "city": "巴黎",
+      "country": "France",
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "dateRange": "9/15-9/19",
+      "nights": 4
+    },
+    {
+      "id": "venice",
+      "city": "威尼斯",
+      "country": "Italy",
+      "lat": 45.4408,
+      "lng": 12.3155,
+      "dateRange": "9/19-9/21",
+      "nights": 2
+    },
+    {
+      "id": "florence",
+      "city": "佛罗伦萨",
+      "country": "Italy",
+      "lat": 43.7696,
+      "lng": 11.2558,
+      "dateRange": "9/21-9/23",
+      "nights": 2
+    },
+    {
+      "id": "rome",
+      "city": "罗马",
+      "country": "Italy",
+      "lat": 41.9028,
+      "lng": 12.4964,
+      "dateRange": "9/23-9/26",
+      "nights": 3
+    }
+  ],
+  "days": [
+    {
+      "day": 1,
+      "date": "2026-09-12",
+      "weekday": "周六",
+      "city": "北京 → 斯德哥尔摩",
+      "country": "Sweden",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "pace": "长途飞行 / 北欧抵达",
+      "title": "从北京出发，先抵达最北的斯德哥尔摩",
+      "summary": "把全程最北的瑞典放在第一站，后面一路往南走。抵达当天只安排入住和老城轻散步，不硬塞景点。",
+      "image": "https://images.unsplash.com/photo-1509356843151-3e7d96241e11?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "斯德哥尔摩水边城市风景",
+      "transport": {
+        "mode": "国际航班 + Arlanda Express",
+        "detail": "北京 PEK/PKX → Stockholm Arlanda；多数方案可能需要一次中转。Arlanda Express 到市中心约 18 分钟。",
+        "booking": "优先选择白天或傍晚前抵达的航班，转机至少预留 2.5 小时，票价和行李规则临近出票前复核。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "北京出发",
+          "description": "护照、申根签、保险、酒店确认单、返程机票和重要票据离线保存。"
+        },
+        {
+          "time": "下午",
+          "title": "抵达斯德哥尔摩",
+          "description": "从 Arlanda 进城，行李多时优先选择机场快线或官方出租车。"
+        },
+        {
+          "time": "晚上",
+          "title": "Gamla Stan 老城轻散步",
+          "description": "只走 Stortorget 广场和老城主街，用北欧慢节奏打开旅程。"
+        }
+      ],
+      "places": [
+        {
+          "name": "Gamla Stan 老城",
+          "description": "斯德哥尔摩历史核心，适合作为旅程第一晚的轻量散步。",
+          "tip": "老城石板路不适合拖大箱，酒店尽量靠近地铁或车站。"
+        }
+      ],
+      "shopping": [
+        "第一晚不购物，只确认酒店周边超市、药店和早餐点。",
+        "瑞典段适合后两天看北欧设计、香氛、围巾和家居小物。"
+      ],
+      "avoid": [
+        "不要订太晚抵达的航班，北欧餐厅关门较早。",
+        "长途飞行当天不要安排不可退款餐厅或博物馆。"
+      ]
+    },
+    {
+      "day": 2,
+      "date": "2026-09-13",
+      "weekday": "周日",
+      "city": "斯德哥尔摩",
+      "country": "Sweden",
+      "lat": 59.3293,
+      "lng": 18.0686,
+      "pace": "老城 / 博物馆 / 设计",
+      "title": "王宫、老城与北欧设计",
+      "summary": "今天把斯德哥尔摩的城市质感看完整：王宫、老城、船岛和设计店。节奏不要太快，瑞典段的意义就是留白。",
+      "image": "https://images.unsplash.com/photo-1528909514045-2fa4ac7a08ba?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "斯德哥尔摩老城街巷",
+      "transport": {
+        "mode": "步行 + 地铁/电车",
+        "detail": "老城、王宫和市中心可步行串联；跨岛用地铁或电车。",
+        "booking": "博物馆按兴趣选择，不必全塞。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "王宫与老城",
+          "description": "从 Stortorget 开始，走小巷、教堂、王宫外观和海边视角。"
+        },
+        {
+          "time": "下午",
+          "title": "船岛或国家博物馆",
+          "description": "晴天多在水边走，阴天把时间给博物馆和咖啡。"
+        },
+        {
+          "time": "晚上",
+          "title": "设计购物与晚餐",
+          "description": "看家居、香氛、围巾和极简服饰，晚餐提前订。"
+        }
+      ],
+      "places": [
+        {
+          "name": "Gamla Stan",
+          "description": "官方老城介绍称这里是 13 世纪以来的城市心脏，街巷、工坊和餐厅至今仍很活跃。",
+          "tip": "清晨和傍晚比中午更适合拍照。"
+        },
+        {
+          "name": "Skeppsholmen 船岛",
+          "description": "看水面、桥、城市天际线，适合安静散步。",
+          "tip": "风大，9 月带薄外套。"
+        }
+      ],
+      "shopping": [
+        "值得买：北欧家居小物、设计海报、羊毛围巾、香氛、极简服饰。",
+        "如果喜欢摄影，可买斯德哥尔摩主题明信片或小幅艺术印刷品。"
+      ],
+      "avoid": [
+        "北欧物价高，不建议买可在国内轻松买到且无价格优势的国际大牌。",
+        "不要把老城餐厅随便挑，旅游街主路性价比一般。"
+      ]
+    },
+    {
+      "day": 3,
+      "date": "2026-09-14",
+      "weekday": "周一",
+      "city": "斯德哥尔摩",
+      "country": "Sweden",
+      "lat": 59.3275,
+      "lng": 18.0911,
+      "pace": "群岛 / 慢旅行",
+      "title": "群岛日：把中段留给水面和风",
+      "summary": "如果天气好，安排群岛短线或 Djurgården 岛；如果天气差，改 Vasa 博物馆、Fotografiska 或设计店。",
+      "image": "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "北欧水面与自然风景",
+      "transport": {
+        "mode": "渡船 / 电车 / 步行",
+        "detail": "根据天气选择群岛船线或市内岛屿；不要订不可改的远程船。",
+        "booking": "若订群岛船，提前确认季节班次和返程时间。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "Djurgården 或群岛出发",
+          "description": "晴天选择水上视角，阴天选择 Vasa 博物馆。"
+        },
+        {
+          "time": "下午",
+          "title": "Fotografiska / 咖啡",
+          "description": "摄影博物馆适合情侣旅行，咖啡时间也能缓冲体力。"
+        },
+        {
+          "time": "晚上",
+          "title": "斯德哥尔摩最后一晚",
+          "description": "整理行李，第二天飞意大利，今晚不要安排太晚。"
+        }
+      ],
+      "places": [
+        {
+          "name": "Djurgården",
+          "description": "博物馆、绿地和水岸集中，是斯德哥尔摩最适合慢走的区域之一。",
+          "tip": "天气决定体验，保留室内备选。"
+        },
+        {
+          "name": "Fotografiska",
+          "description": "摄影展、城市水岸和餐厅结合度高，适合雨天或傍晚。",
+          "tip": "看展前确认当期展览是否符合兴趣。"
+        }
+      ],
+      "shopping": [
+        "补买瑞典巧克力、咖啡、设计小物或轻便围巾。",
+        "如果行李紧张，避免买易碎玻璃器皿。"
+      ],
+      "avoid": [
+        "不要把群岛船排得太满，返程晚点会影响次日飞罗马。",
+        "9 月北欧天气变化快，不要只带夏装。"
+      ]
+    },
+    {
+      "day": 4,
+      "date": "2026-09-15",
+      "weekday": "周二",
+      "city": "斯德哥尔摩 → 巴黎",
+      "country": "France",
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "pace": "跨国飞行 / 巴黎夜景",
+      "title": "飞往巴黎，把夜晚留给塞纳河",
+      "summary": "从斯德哥尔摩飞到巴黎，地理上开始往西南移动。抵达后只安排塞纳河、铁塔远眺和轻晚餐。",
+      "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "巴黎埃菲尔铁塔与城市天际线",
+      "transport": {
+        "mode": "欧洲内陆航班 + 市区接驳",
+        "detail": "Stockholm Arlanda → Paris CDG/ORY；抵达后根据酒店位置选择官方出租车、机场快线或预约接机。",
+        "booking": "选择含托运行李的票价；不要为了低价选择夜间抵达。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "斯德哥尔摩退房",
+          "description": "机场快线进 Arlanda，给托运行李和安检留足时间。"
+        },
+        {
+          "time": "下午",
+          "title": "飞往巴黎",
+          "description": "抵达后先入住，不把当天安排得太满。"
+        },
+        {
+          "time": "晚上",
+          "title": "塞纳河与铁塔远眺",
+          "description": "选特罗卡德罗或塞纳河边轻散步，给巴黎段一个浪漫开场。"
+        }
+      ],
+      "places": [
+        {
+          "name": "塞纳河与埃菲尔铁塔远眺",
+          "description": "第一晚不登塔，选特罗卡德罗或战神广场远眺，更适合拍开场照片。",
+          "tip": "看好随身包，夜间不要接受陌生人递来的手链、签名板或小游戏邀请。"
+        }
+      ],
+      "shopping": [
+        "巴黎第一晚不急着购物，先踩点药妆、百货和餐厅位置。",
+        "如果抵达较早，可买水、交通票和轻食。"
+      ],
+      "avoid": [
+        "机场到酒店不要坐黑车。",
+        "抵达日不要安排卢浮宫、凡尔赛或登塔等硬门票。"
+      ]
+    },
+    {
+      "day": 5,
+      "date": "2026-09-16",
+      "weekday": "周三",
+      "city": "巴黎",
+      "country": "France",
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "pace": "经典巴黎 / 浪漫开场",
+      "title": "塞纳河、铁塔与香榭丽舍",
+      "summary": "把第一整天留给巴黎轮廓：河岸、铁塔、凯旋门和傍晚的香榭丽舍。行程很巴黎，但不把自己塞进长队。",
+      "image": "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "巴黎街道与埃菲尔铁塔",
+      "transport": {
+        "mode": "步行 + 地铁",
+        "detail": "住在 1-8 区或圣日耳曼会更顺；今天不建议跨太远。",
+        "booking": "若想登埃菲尔铁塔，只从官网订票，避开加价代理。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "特罗卡德罗与铁塔周边",
+          "description": "早到拍照，人少、光线柔。之后沿塞纳河走到亚历山大三世桥。"
+        },
+        {
+          "time": "下午",
+          "title": "凯旋门与香榭丽舍",
+          "description": "以散步为主，不要把购物放太满；可以先踩点老佛爷/春天百货品牌库存。"
+        },
+        {
+          "time": "晚上",
+          "title": "塞纳河游船或左岸晚餐",
+          "description": "游船适合蜜月开场，但选择正规运营商并提前看码头位置。"
+        }
+      ],
+      "places": [
+        {
+          "name": "埃菲尔铁塔",
+          "description": "巴黎最经典的视觉符号，适合做全程旅行的第一张纪念照。",
+          "tip": "官网提示高峰期存在假票风险，登塔票务只认官方渠道。"
+        },
+        {
+          "name": "亚历山大三世桥",
+          "description": "金色雕塑、河景和远处铁塔同框，傍晚很适合拍两人照。",
+          "tip": "拍照时背包放身前，不把手机递给陌生人。"
+        }
+      ],
+      "shopping": [
+        "法国可看香水、药妆、Saint James 海魂衫、Longchamp、法式家居小物。",
+        "老佛爷/春天百货适合集中购物和退税，但热门包款库存不稳定。"
+      ],
+      "avoid": [
+        "铁塔、卢浮宫、地铁站周边的签名板、手绳、假问路是高频骗局。",
+        "餐厅门口用多国语言拉客、菜单图片很重的店，通常性价比不高。"
+      ]
+    },
+    {
+      "day": 6,
+      "date": "2026-09-17",
+      "weekday": "周四",
+      "city": "巴黎",
+      "country": "France",
+      "lat": 48.8606,
+      "lng": 2.3376,
+      "pace": "博物馆 / 左岸",
+      "title": "卢浮宫与奥赛：把艺术日放在周一",
+      "summary": "卢浮宫周二闭馆，所以安排在周一。上午看卢浮宫重点，下午去奥赛或橘园，晚上回左岸慢慢吃。",
+      "image": "https://images.unsplash.com/photo-1565099824688-e93eb20fe622?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "卢浮宫玻璃金字塔",
+      "transport": {
+        "mode": "步行 + 地铁",
+        "detail": "卢浮宫、杜乐丽、橘园、奥赛在同一片区域，适合串联。",
+        "booking": "卢浮宫官网预约时段；奥赛如想控制排队，也提前买票。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "卢浮宫重点路线",
+          "description": "只抓三大件和你们真正想看的馆，不追求看完。给入场安检和走路预留时间。"
+        },
+        {
+          "time": "下午",
+          "title": "奥赛或橘园",
+          "description": "奥赛适合印象派；橘园体量小，更适合不想太累的下午。"
+        },
+        {
+          "time": "晚上",
+          "title": "圣日耳曼晚餐",
+          "description": "选一家提前订位的小酒馆，今天不要再安排夜间购物。"
+        }
+      ],
+      "places": [
+        {
+          "name": "卢浮宫",
+          "description": "世界级博物馆，适合做一次有重点的艺术巡礼。",
+          "tip": "官方信息显示卢浮宫周二闭馆，门票购买注意假票与加价网站。"
+        },
+        {
+          "name": "奥赛博物馆",
+          "description": "由火车站改造的博物馆，印象派收藏非常适合蜜月旅行节奏。",
+          "tip": "馆内大钟拍照点排队多，先看展再拍照。"
+        }
+      ],
+      "shopping": [
+        "博物馆商店可以买高质量画册、明信片、丝巾、小摆件，比街边纪念品更值得。",
+        "法国药妆可以先列清单：理肤泉、欧缇丽、Nuxe、Bioderma 等按需买。"
+      ],
+      "avoid": [
+        "不要买“跳过排队”话术很夸张的第三方票，先看官网是否有票。",
+        "不要把卢浮宫和凡尔赛放同一天，会累且体验差。"
+      ]
+    },
+    {
+      "day": 7,
+      "date": "2026-09-18",
+      "weekday": "周五",
+      "city": "巴黎 / 凡尔赛",
+      "country": "France",
+      "lat": 48.8049,
+      "lng": 2.1204,
+      "pace": "郊区宫殿 / 花园",
+      "title": "凡尔赛一日，晚上回巴黎收尾",
+      "summary": "凡尔赛宫周一闭馆，周二安排正合适。今天以宫殿、花园、特里亚农为主，晚上回巴黎轻购物或餐厅。",
+      "image": "https://images.unsplash.com/photo-1591289009723-aef0a1a8a211?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "凡尔赛宫花园与宫殿",
+      "transport": {
+        "mode": "RER / 火车往返",
+        "detail": "从巴黎市区前往 Versailles Château Rive Gauche 等车站，具体线路以当天 RATP/Transilien 为准。",
+        "booking": "凡尔赛 Passport 票适合想看宫殿、花园和特里亚农的完整体验。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "镜厅与主宫殿",
+          "description": "选择早时段入场，先看镜厅和国王/王后套间。"
+        },
+        {
+          "time": "下午",
+          "title": "花园、特里亚农和王后村",
+          "description": "天气好就多留给花园；脚力一般可减少特里亚农深度。"
+        },
+        {
+          "time": "晚上",
+          "title": "巴黎最后一晚",
+          "description": "回市区后安排药妆补货或一顿正式晚餐。"
+        }
+      ],
+      "places": [
+        {
+          "name": "凡尔赛宫",
+          "description": "法国王室历史和空间秩序的代表，镜厅是最核心的参观动线。",
+          "tip": "官网显示宫殿和特里亚农周一闭馆，门票不可退换，日期要核准。"
+        },
+        {
+          "name": "凡尔赛花园",
+          "description": "比宫殿更适合慢拍照，天气好时值得留出大量时间。",
+          "tip": "花园范围很大，穿好走的鞋，不要当天穿新鞋。"
+        }
+      ],
+      "shopping": [
+        "巴黎最后一晚适合买药妆、茶、巧克力、香氛蜡烛和小众香水。",
+        "奢侈品如果要退税，护照信息、信用卡和包装保留好。"
+      ],
+      "avoid": [
+        "凡尔赛不要临时到现场赌票，热门日期排队会破坏体验。",
+        "RER 返程注意末班和临时施工；提前看官方交通状态。"
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2026-09-19",
+      "weekday": "周六",
+      "city": "巴黎 → 威尼斯",
+      "country": "Italy",
+      "lat": 45.4408,
+      "lng": 12.3155,
+      "pace": "跨国飞行 / 水城抵达",
+      "title": "从巴黎飞威尼斯，进入意大利北部",
+      "summary": "巴黎到威尼斯用航班最省时间。这样意大利段从北部开始，后面按威尼斯 → 佛罗伦萨 → 罗马一路南下。",
+      "image": "https://images.unsplash.com/photo-1514890547357-a9ee288728e0?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "威尼斯大运河与贡多拉",
+      "transport": {
+        "mode": "欧洲内陆航班 + 水路/陆路进岛",
+        "detail": "Paris CDG/ORY → Venice Marco Polo；到威尼斯主岛可用 Alilaguna、水上出租车或巴士转步行。",
+        "booking": "优先选择上午或中午航班，下午抵达后还有完整水城初见。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "巴黎退房去机场",
+          "description": "巴黎机场路程和安检时间不短，预留充足缓冲。"
+        },
+        {
+          "time": "下午",
+          "title": "抵达威尼斯",
+          "description": "先入住，再轻装去大运河和里亚托桥。酒店尽量选桥少、靠水上交通的位置。"
+        },
+        {
+          "time": "晚上",
+          "title": "威尼斯夜景",
+          "description": "夜里游客散去后很浪漫，但小巷复杂，离线地图必备。"
+        }
+      ],
+      "places": [
+        {
+          "name": "大运河",
+          "description": "抵达威尼斯第一眼的核心，建议坐 1 号水上巴士看一段。",
+          "tip": "行李多时水上巴士上下船不轻松，酒店位置很关键。"
+        },
+        {
+          "name": "里亚托桥",
+          "description": "威尼斯最经典的桥和市场区域。",
+          "tip": "桥上人多，手机和相机腕带拿好。"
+        }
+      ],
+      "shopping": [
+        "威尼斯可看玻璃、面具、纸品、香氛和手工装饰。",
+        "主岛纪念品店很多，先看材质和产地，不急着下手。"
+      ],
+      "avoid": [
+        "不要订离水上交通远、需要跨很多桥的酒店。",
+        "不要买廉价“Murano glass”却没有来源说明的玻璃制品。"
+      ]
+    },
+    {
+      "day": 9,
+      "date": "2026-09-20",
+      "weekday": "周日",
+      "city": "威尼斯",
+      "country": "Italy",
+      "lat": 45.4342,
+      "lng": 12.3388,
+      "pace": "圣马可 / 岛屿 / 纪念夜",
+      "title": "圣马可、总督府与最后一个完整夜晚",
+      "summary": "最后一个完整游玩日给威尼斯：上午圣马可，下午 Murano/Burano 或美术馆，晚上安排一顿正式晚餐。",
+      "image": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "威尼斯运河与建筑",
+      "transport": {
+        "mode": "步行 + 水上巴士",
+        "detail": "主岛核心步行即可；去 Murano/Burano 需看水上交通时间。",
+        "booking": "圣马可教堂、总督府如想入内建议提前预约。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "圣马可广场与总督府",
+          "description": "早到避开旅行团，先看广场、教堂外观，再决定是否入内。"
+        },
+        {
+          "time": "下午",
+          "title": "Murano / Burano 或美术馆",
+          "description": "想购物去 Murano，看彩色房子去 Burano；不想坐船就留在主岛美术馆。"
+        },
+        {
+          "time": "晚上",
+          "title": "蜜月收尾晚餐",
+          "description": "订靠水或安静小巷餐厅，避免圣马可广场第一排高价低质餐厅。"
+        }
+      ],
+      "places": [
+        {
+          "name": "圣马可广场",
+          "description": "威尼斯最具仪式感的空间，清晨和夜晚最美。",
+          "tip": "广场咖啡馆可能收服务/音乐费用，入座前看清价格。"
+        },
+        {
+          "name": "Murano / Burano",
+          "description": "Murano 看玻璃工艺，Burano 看彩色房子和蕾丝。",
+          "tip": "两岛同日可行但会很赶，按兴趣二选一更舒服。"
+        }
+      ],
+      "shopping": [
+        "值得买：有认证或清楚来源的 Murano 玻璃、小型玻璃饰品、纸品、面具。",
+        "如果买玻璃，问清包装、运输和退税。"
+      ],
+      "avoid": [
+        "不要在圣马可广场随意喂鸽或坐下吃自带食物，可能违反当地规定或被劝阻。",
+        "贡多拉价格和路线先谈清楚；想省心可只坐 traghetto 横渡体验。"
+      ]
+    },
+    {
+      "day": 10,
+      "date": "2026-09-21",
+      "weekday": "周一",
+      "city": "威尼斯 → 佛罗伦萨",
+      "country": "Italy",
+      "lat": 43.7696,
+      "lng": 11.2558,
+      "pace": "高铁 / 文艺复兴抵达",
+      "title": "坐高铁到佛罗伦萨，傍晚看日落",
+      "summary": "意大利段开始沿高铁主干线南下。周一乌菲兹通常闭馆，所以今天只安排抵达、老城和米开朗基罗广场日落。",
+      "image": "https://images.unsplash.com/photo-1541370976299-4d24ebbc9077?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "佛罗伦萨城市与圣母百花大教堂",
+      "transport": {
+        "mode": "意大利高铁",
+        "detail": "Venezia Santa Lucia → Firenze Santa Maria Novella；通常经 Padua/Bologna/Florence 走廊南下。",
+        "booking": "提前买固定车次通常更省；确认出发站是 Santa Lucia，不要误选 Mestre。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "威尼斯退房，高铁南下",
+          "description": "留足从酒店到火车站的水路或步行时间，桥多时不要卡点。"
+        },
+        {
+          "time": "下午",
+          "title": "圣母百花大教堂外观与老桥",
+          "description": "第一天下午以走街为主，熟悉佛罗伦萨尺度。"
+        },
+        {
+          "time": "傍晚",
+          "title": "米开朗基罗广场日落",
+          "description": "佛罗伦萨最适合情侣的高点，注意返程打车或步行路线。"
+        }
+      ],
+      "places": [
+        {
+          "name": "圣母百花大教堂",
+          "description": "佛罗伦萨天际线核心，外观已经很震撼。",
+          "tip": "登顶需要预约和体力，不建议和搬酒店日叠加。"
+        },
+        {
+          "name": "米开朗基罗广场",
+          "description": "看整座佛罗伦萨日落的经典地点。",
+          "tip": "提前到，带外套，晚上下山注意人流。"
+        }
+      ],
+      "shopping": [
+        "佛罗伦萨适合看皮具、手工纸、文具、香氛、金饰。",
+        "老桥金饰水很深，先看工艺和价格，不冲动买。"
+      ],
+      "avoid": [
+        "火车站周边看好行李，尤其上车、找座、放行李时。",
+        "不要在街边摊买所谓真皮大牌同款。"
+      ]
+    },
+    {
+      "day": 11,
+      "date": "2026-09-22",
+      "weekday": "周二",
+      "city": "佛罗伦萨",
+      "country": "Italy",
+      "lat": 43.7687,
+      "lng": 11.2556,
+      "pace": "乌菲兹 / 托斯卡纳",
+      "title": "乌菲兹与托斯卡纳味道",
+      "summary": "乌菲兹普通闭馆日是周一，周三安排稳。上午看乌菲兹，下午二选一：学院美术馆/城市散步，或半日托斯卡纳酒庄。",
+      "image": "https://images.unsplash.com/photo-1534445867742-43195f401b6c?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "佛罗伦萨老桥与阿诺河",
+      "transport": {
+        "mode": "步行 / 半日包车可选",
+        "detail": "市中心景点密集，步行为主；酒庄半日建议包车或小团。",
+        "booking": "乌菲兹提前预约时段，避免把排队时间浪费在短停留城市。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "乌菲兹美术馆",
+          "description": "重点看波提切利、达芬奇、米开朗基罗、拉斐尔相关展厅。"
+        },
+        {
+          "time": "下午",
+          "title": "学院美术馆或酒庄",
+          "description": "想看大卫选学院美术馆；想蜜月感更强选托斯卡纳半日酒庄。"
+        },
+        {
+          "time": "晚上",
+          "title": "牛排晚餐",
+          "description": "佛罗伦萨 T 骨牛排适合两人分享，提前订位并确认熟度。"
+        }
+      ],
+      "places": [
+        {
+          "name": "乌菲兹美术馆",
+          "description": "文艺复兴绘画核心目的地，短时间内最值得预约的佛罗伦萨博物馆。",
+          "tip": "官方票务会跳转到指定售票服务，注意票名和日期。"
+        },
+        {
+          "name": "老桥",
+          "description": "佛罗伦萨最有识别度的桥，傍晚河岸很适合散步。",
+          "tip": "桥上游客多，不建议边走边看手机。"
+        }
+      ],
+      "shopping": [
+        "值得买：Scuola del Cuoio 等正规皮具、佛罗伦萨香氛、手工纸、意大利红酒。",
+        "皮具看走线、皮革气味、店铺资质和是否可退税。"
+      ],
+      "avoid": [
+        "明显低价“真皮”多半质量不稳；不要为了便宜买大件。",
+        "酒庄日不要自己开车，意大利限速、ZTL 和酒驾风险都不值得。"
+      ]
+    },
+    {
+      "day": 12,
+      "date": "2026-09-23",
+      "weekday": "周三",
+      "city": "佛罗伦萨 → 罗马",
+      "country": "Italy",
+      "lat": 41.9028,
+      "lng": 12.4964,
+      "pace": "高铁 / 罗马夜景",
+      "title": "继续南下到罗马，夜游喷泉",
+      "summary": "佛罗伦萨到罗马用高铁约 1.5 小时级别，抵达后把节奏放轻，晚上只安排喷泉、广场和一顿好吃的。",
+      "image": "https://images.unsplash.com/photo-1525874684015-58379d421a52?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "罗马斗兽场",
+      "transport": {
+        "mode": "意大利高铁",
+        "detail": "Firenze Santa Maria Novella → Roma Termini；这是意大利高铁主干线核心路段。",
+        "booking": "选 10:00-12:00 间车次最舒服，抵达罗马后还有下午和晚上。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "佛罗伦萨退房，高铁去罗马",
+          "description": "不要选太早车次，保留早餐和从酒店到车站的时间。"
+        },
+        {
+          "time": "下午",
+          "title": "入住罗马",
+          "description": "熟悉酒店周边，确认第二天古罗马区域交通。"
+        },
+        {
+          "time": "晚上",
+          "title": "特莱维喷泉与万神殿外观",
+          "description": "罗马夜景作为意大利压轴段开场，但注意随身物品。"
+        }
+      ],
+      "places": [
+        {
+          "name": "特莱维喷泉",
+          "description": "罗马最适合夜间开场的地点之一，但人很多。",
+          "tip": "不要在喷泉边打开大钱包，也不要理会主动帮拍的人。"
+        },
+        {
+          "name": "万神殿外观",
+          "description": "晚间广场氛围好，适合轻松散步。",
+          "tip": "内部参观放到白天更好。"
+        }
+      ],
+      "shopping": [
+        "罗马第一晚不购物，只确认酒店周边超市、药店和早餐点。",
+        "可以买意大利电话卡/eSIM 备选或补充洗护用品。"
+      ],
+      "avoid": [
+        "机场、Termini、喷泉周边都是扒手高发区域。",
+        "不要坐无标识黑车，FCO 到市区使用官方出租车或火车。"
+      ]
+    },
+    {
+      "day": 13,
+      "date": "2026-09-24",
+      "weekday": "周四",
+      "city": "罗马",
+      "country": "Italy",
+      "lat": 41.8902,
+      "lng": 12.4922,
+      "pace": "古罗马 / 城市散步",
+      "title": "斗兽场、古罗马广场与蒙蒂",
+      "summary": "周日安排古罗马区域，不碰梵蒂冈博物馆闭馆问题。上午看斗兽场，下午在蒙蒂和威尼斯广场周边慢走。",
+      "image": "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "罗马古迹与街景",
+      "transport": {
+        "mode": "步行 + 地铁",
+        "detail": "斗兽场、古罗马广场、威尼斯广场和蒙蒂可以串联。",
+        "booking": "斗兽场/古罗马广场票务提前从官方或可信渠道预约。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "斗兽场",
+          "description": "选择早场，避开日晒和人流。带水但注意安检规则。"
+        },
+        {
+          "time": "下午",
+          "title": "古罗马广场与帕拉蒂尼山",
+          "description": "慢慢走遗址区，脚力一般可减少深度，把体力留给晚上。"
+        },
+        {
+          "time": "晚上",
+          "title": "蒙蒂晚餐",
+          "description": "蒙蒂比景点门口更适合找餐厅和小酒吧。"
+        }
+      ],
+      "places": [
+        {
+          "name": "罗马斗兽场",
+          "description": "罗马最强的历史场景，适合意大利段第一整天。",
+          "tip": "不要在斗兽场外买黄牛票或被装扮合影收费。"
+        },
+        {
+          "name": "古罗马广场",
+          "description": "理解罗马历史的核心区域，建议配合语音导览。",
+          "tip": "遮阳、防滑鞋和水很重要。"
+        }
+      ],
+      "shopping": [
+        "蒙蒂可看复古店、小众皮具、手工饰品。",
+        "意大利第一天先试 Gelato 和咖啡，不急着大额购物。"
+      ],
+      "avoid": [
+        "景点门口扮演角斗士合影可能高价收费。",
+        "不要把护照原件放在外套口袋或背包外层。"
+      ]
+    },
+    {
+      "day": 14,
+      "date": "2026-09-25",
+      "weekday": "周五",
+      "city": "罗马 / 梵蒂冈",
+      "country": "Italy",
+      "lat": 41.9022,
+      "lng": 12.4539,
+      "pace": "梵蒂冈 / 特拉斯提弗列",
+      "title": "梵蒂冈博物馆放在周一",
+      "summary": "梵蒂冈博物馆通常周一到周六开放，周日除每月最后一个周日外闭馆，所以今天安排最稳。下午去圣彼得或城堡，晚上特拉斯提弗列。",
+      "image": "https://images.unsplash.com/photo-1531572753322-ad063cecc140?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "圣彼得广场与梵蒂冈",
+      "transport": {
+        "mode": "地铁 + 步行",
+        "detail": "梵蒂冈博物馆入口和圣彼得广场不是同一个点，步行时间要预留。",
+        "booking": "只从 Vatican Museums 官方票务或可信渠道买票，热门时段提前预约。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "梵蒂冈博物馆与西斯廷礼拜堂",
+          "description": "选早场或官方导览，减少排队和人流压力。"
+        },
+        {
+          "time": "下午",
+          "title": "圣彼得大教堂 / 圣天使堡",
+          "description": "根据体力二选一；教堂注意着装，肩膀和膝盖不要过度裸露。"
+        },
+        {
+          "time": "晚上",
+          "title": "特拉斯提弗列",
+          "description": "罗马最适合夜晚吃饭散步的区域之一，提前订餐厅。"
+        }
+      ],
+      "places": [
+        {
+          "name": "梵蒂冈博物馆",
+          "description": "拉斐尔房间、西斯廷礼拜堂和大量古典收藏，体量很大。",
+          "tip": "官网提醒只有 tickets.museivaticani.va 是官方线上购票入口。"
+        },
+        {
+          "name": "特拉斯提弗列",
+          "description": "餐厅、酒吧和街巷氛围强，适合罗马最后一晚。",
+          "tip": "热门餐厅最好订位。"
+        }
+      ],
+      "shopping": [
+        "梵蒂冈官方商店可买明信片、邮票、书籍和宗教艺术复制品。",
+        "罗马可看皮具、香氛、Marvis 牙膏、意大利咖啡豆。"
+      ],
+      "avoid": [
+        "不要穿短裤背心进宗教场所。",
+        "不要买明显低价的“梵蒂冈免排队票”，先核验渠道。"
+      ]
+    },
+    {
+      "day": 15,
+      "date": "2026-09-26",
+      "weekday": "周六",
+      "city": "罗马 → 北京",
+      "country": "Italy",
+      "lat": 41.8003,
+      "lng": 12.2389,
+      "pace": "返程 / 退税",
+      "title": "从罗马返程，把退税和机场时间留足",
+      "summary": "北到南路线最后停在罗马，返程航班选择通常比威尼斯更稳。今天所有安排围绕机场和退税，不再安排硬景点。",
+      "image": "https://images.unsplash.com/photo-1534113414509-0eec2bfb493f?auto=format&fit=crop&w=1600&q=82",
+      "imageAlt": "威尼斯水面与码头",
+      "transport": {
+        "mode": "机场交通 + 国际航班",
+        "detail": "Roma Termini 到 Fiumicino 可坐 Leonardo Express，官方资料显示约 32 分钟；行李多可预约接机。",
+        "booking": "罗马 FCO → 北京可比较直飞和一次中转；退税、托运和安检都要留足时间。"
+      },
+      "schedule": [
+        {
+          "time": "上午",
+          "title": "退房与机场交通",
+          "description": "根据航班时间选择 Leonardo Express、官方出租车或预约接机。"
+        },
+        {
+          "time": "中午",
+          "title": "退税与托运",
+          "description": "退税商品、发票、护照、登机牌、信用卡集中放好；不要先托运可能要查验的商品。"
+        },
+        {
+          "time": "下午/晚上",
+          "title": "返程北京",
+          "description": "整理照片、票据和退税材料，给长途飞行留出休息时间。"
+        }
+      ],
+      "places": [
+        {
+          "name": "罗马 Fiumicino 机场",
+          "description": "罗马主要国际机场，返程选择和接驳通常比威尼斯更稳。",
+          "tip": "退税柜台排队不可控，国际航班建议更早到机场。"
+        }
+      ],
+      "shopping": [
+        "机场只做补买，不建议在最后一刻做大额决策。",
+        "退税材料提前按国家/店铺整理，避免柜台前翻箱。"
+      ],
+      "avoid": [
+        "不要把退税商品提前托运，海关可能要求查看实物。",
+        "不要低估 Termini 和 FCO 的排队时间。"
+      ]
+    }
+  ],
+  "transportPlan": [
+    {
+      "leg": "北京 → 斯德哥尔摩",
+      "date": "2026-09-12",
+      "mode": "国际航班",
+      "recommendedWindow": "优先选白天或傍晚前抵达的航班；若需中转，至少预留 2.5 小时。",
+      "booking": "北京到斯德哥尔摩直飞选择通常少，重点比较一次中转总时长、行李规则和抵达时间。",
+      "backup": "若斯德哥尔摩入境票价过高，可改为先飞巴黎，但路线会回到折返方案。"
+    },
+    {
+      "leg": "斯德哥尔摩 → 巴黎",
+      "date": "2026-09-15",
+      "mode": "欧洲内陆航班",
+      "recommendedWindow": "上午退房去机场，午后抵达巴黎，晚上只安排塞纳河轻散步。",
+      "booking": "选择含托运行李票价，避免廉航手提行李限制影响体验。",
+      "backup": "全程火车耗时和换乘不适合 15 天蜜月主线。"
+    },
+    {
+      "leg": "巴黎 → 威尼斯",
+      "date": "2026-09-19",
+      "mode": "欧洲内陆航班",
+      "recommendedWindow": "上午或中午从巴黎出发，下午抵达威尼斯主岛。",
+      "booking": "确认抵达机场为 VCE Marco Polo，并提前规划水路或陆路进岛。",
+      "backup": "若威尼斯航班时间差，可飞米兰后高铁到威尼斯，但当天会更赶。"
+    },
+    {
+      "leg": "威尼斯 → 佛罗伦萨",
+      "date": "2026-09-21",
+      "mode": "Frecciarossa / Italo 高铁",
+      "recommendedWindow": "上午或中午出发，抵达佛罗伦萨后留给老城和日落。",
+      "booking": "选 Venezia Santa Lucia → Firenze SMN，别误选 Mestre。",
+      "backup": "威尼斯主岛到火车站桥多，必要时用水上交通或酒店行李服务。"
+    },
+    {
+      "leg": "佛罗伦萨 → 罗马",
+      "date": "2026-09-23",
+      "mode": "Frecciarossa / Italo 高铁",
+      "recommendedWindow": "10:00-12:00 出发，约 1.5 小时级别，抵达后还有下午可玩。",
+      "booking": "Firenze SMN → Roma Termini 是高铁主干线，提前买固定车次通常更省。",
+      "backup": "如遇罢工或维护，前一天复核 Trenitalia/Italo 通知。"
+    },
+    {
+      "leg": "罗马 → 北京",
+      "date": "2026-09-26",
+      "mode": "国际航班",
+      "recommendedWindow": "优先罗马 FCO 返程，比较直飞和一次中转；返程日不安排硬景点。",
+      "booking": "退税、托运、安检和机场交通都要留足时间。",
+      "backup": "若罗马票价异常，可比较米兰返程，但会增加一次北上移动。"
+    }
+  ],
+  "shoppingGuides": [
+    {
+      "country": "法国",
+      "worthBuying": [
+        "药妆：理肤泉、欧缇丽、Nuxe、Bioderma，适合按清单补货。",
+        "香水与香氛：小众香水、蜡烛、室内香氛比普通纪念品更有蜜月感。",
+        "茶、巧克力、博物馆画册、丝巾和 Saint James 海魂衫。"
+      ],
+      "avoid": [
+        "热门景点周边廉价纪念品、假画、塑料铁塔模型。",
+        "非官网铁塔/博物馆票，尤其是价格异常或域名相似的网站。",
+        "奢侈品冲动购买：先确认退税、库存、国内差价和售后。"
+      ]
+    },
+    {
+      "country": "瑞典",
+      "worthBuying": [
+        "北欧设计小物、家居、海报、羊毛围巾、香氛和极简服饰。",
+        "瑞典咖啡、巧克力、文具和摄影/设计类书籍。",
+        "Acne Studios、Toteme 等如正好遇到合适款式可买。"
+      ],
+      "avoid": [
+        "国际大牌通常价格优势不明显，不要为了到此一买而买。",
+        "易碎玻璃和大件家居会增加行李风险。",
+        "老城主街过度游客化餐厅和纪念品店。"
+      ]
+    },
+    {
+      "country": "意大利",
+      "worthBuying": [
+        "佛罗伦萨正规皮具、手工纸、香氛、红酒、咖啡豆和 Marvis。",
+        "威尼斯有来源证明的 Murano 玻璃、小型玻璃饰品和手工面具。",
+        "罗马可买博物馆复制品、宗教艺术小物、意式餐具和橄榄油。"
+      ],
+      "avoid": [
+        "街边低价“真皮”和来源不明的 Murano 玻璃。",
+        "景点门口菜单图片巨大、拉客强烈、价格不透明的餐厅。",
+        "ZTL 区域自驾和酒庄日自驾。"
+      ]
+    }
+  ],
+  "essentialNotes": [
+    {
+      "title": "签证与入境",
+      "items": [
+        "中国普通护照通常需要申根短期旅游签证；若法国停留时间最长或首入法国，可按法国申根规则准备材料。",
+        "申根短停通常不得超过任意 180 天内 90 天。",
+        "EES 已在 2026 年 4 月 10 日起全面运行，非欧盟短停旅客外部边境会记录护照、面部和指纹等信息。",
+        "ETIAS 官方当前计划 2026 年第四季度开始；中国签证旅客通常关注申根签和 EES，临近出发仍需复核官方公告。"
+      ]
+    },
+    {
+      "title": "订票顺序",
+      "items": [
+        "先定国际机票大框架，再定可取消酒店，最后定博物馆和高铁。",
+        "卢浮宫、凡尔赛、梵蒂冈、乌菲兹、斗兽场都建议官网或可信渠道预约。",
+        "意大利高铁临近售票开放后再锁定具体车次，保留罢工/维护复核。"
+      ]
+    },
+    {
+      "title": "防盗与安全",
+      "items": [
+        "巴黎地铁、罗马 Termini、威尼斯桥区、热门喷泉和广场都要把包放身前。",
+        "不要把手机放餐桌边缘；不要让陌生人帮拍或帮拿行李。",
+        "护照原件放酒店保险箱或贴身暗袋，随身带复印件/电子件。"
+      ]
+    },
+    {
+      "title": "退税与支付",
+      "items": [
+        "大额购物确认是否 Tax Free、最低消费额、退税公司和退税方式。",
+        "离境前不要托运需要海关查验的商品。",
+        "准备 Visa/Mastercard，部分欧洲小店不一定支持银联；少量现金用于小额消费。"
+      ]
+    },
+    {
+      "title": "行李与穿搭",
+      "items": [
+        "9 月欧洲昼夜温差明显：薄外套、舒服鞋、雨伞/防水外套必带。",
+        "宗教场所避免露肩、过短下装；博物馆日穿轻便鞋。",
+        "威尼斯桥多，尽量使用中型箱，不要带过重行李。"
+      ]
+    },
+    {
+      "title": "通讯与地图",
+      "items": [
+        "提前准备覆盖法国、瑞典、意大利的 eSIM 或漫游套餐。",
+        "常用地图、酒店地址、车票和门票全部离线保存。",
+        "餐厅、博物馆和交通罢工信息出发前一周再复核。"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "France-Visas: Schengen short-stay visa",
+      "url": "https://france-visas.gouv.fr/en/web/france-visas/visa-de-court-sejour",
+      "note": "申根短期签证与 90/180 天规则。"
+    },
+    {
+      "label": "European Commission: EES / ETIAS differences",
+      "url": "https://home-affairs.ec.europa.eu/news/main-differences-between-ees-and-etias-what-travellers-need-know-2026-04-28_en",
+      "note": "EES 已全面运行，ETIAS 计划 2026 年第四季度。"
+    },
+    {
+      "label": "Leaflet Quick Start Guide",
+      "url": "https://leafletjs.com/examples/quick-start/",
+      "note": "无 Key 交互式网页地图、标记和折线实现参考。"
+    },
+    {
+      "label": "CARTO Basemaps",
+      "url": "https://carto.com/basemaps",
+      "note": "地图底图基于 OpenStreetMap 数据并由 CARTO 提供。"
+    },
+    {
+      "label": "Trenitalia Frecciarossa routes and services",
+      "url": "https://www.trenitalia.com/en/frecce/frecciarossa.html",
+      "note": "意大利高铁路线覆盖罗马、佛罗伦萨、威尼斯等城市。"
+    },
+    {
+      "label": "Trenitalia destinations: Rome-Florence / Rome-Venice times",
+      "url": "https://www.trenitalia.com/en/frecce/our-destinations-app.app.html",
+      "note": "罗马-佛罗伦萨约 1.5 小时级别，罗马-威尼斯 4 小时内。"
+    },
+    {
+      "label": "Official Eiffel Tower visitor guidance",
+      "url": "https://www.toureiffel.paris/en/news/visit",
+      "note": "埃菲尔铁塔官网提醒购票与防假票。"
+    },
+    {
+      "label": "Louvre hours and admission",
+      "url": "https://www.louvre.fr/en/hours-admission-directions",
+      "note": "卢浮宫闭馆日和购票提醒。"
+    },
+    {
+      "label": "Château de Versailles practical information",
+      "url": "https://en.chateauversailles.fr/plan-your-visit/tickets-and-prices",
+      "note": "凡尔赛宫与特里亚农周一闭馆。"
+    },
+    {
+      "label": "Visit Gamla Stan official guide",
+      "url": "https://www.visitgamlastan.se/english",
+      "note": "斯德哥尔摩老城历史与购物区域。"
+    },
+    {
+      "label": "Arlanda Express",
+      "url": "https://www.arlandaexpress.com/",
+      "note": "Arlanda 机场到斯德哥尔摩市中心约 18 分钟。"
+    },
+    {
+      "label": "Vatican Museums opening days and ticket notice",
+      "url": "https://www.museivaticani.va/content/museivaticani/en/info/orari-musei-vaticani.html",
+      "note": "梵蒂冈博物馆开放日、最后入场和官方票务提醒。"
+    },
+    {
+      "label": "Uffizi Galleries tickets",
+      "url": "https://www.uffizi.it/en/tickets",
+      "note": "乌菲兹票务、官方售票服务和普通闭馆日说明。"
+    },
+    {
+      "label": "Venice Marco Polo Airport water transport",
+      "url": "https://www.veneziaairport.it/en_gb/news/boat/",
+      "note": "机场码头有 Alilaguna 水上交通连接威尼斯和主要岛屿。"
+    }
+  ]
+}

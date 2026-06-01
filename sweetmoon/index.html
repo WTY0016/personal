@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sweetmoon Atlas | 欧洲蜜月滚动旅行长卷</title>
+  <meta name="description" content="2026 年 9 月北京出发，瑞典、法国、意大利蜜月旅行滚动地图攻略，含航班、火车、城市景点、美食、特产与 tips。">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://basemaps.cartocdn.com">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-layer is-active" id="ambient-a"></div>
+    <div class="ambient-layer" id="ambient-b"></div>
+    <div class="ambient-scrim"></div>
+  </div>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <span id="scroll-progress-bar"></span>
+  </div>
+
+  <header class="hero" id="top">
+    <nav class="topbar" aria-label="页面导航">
+      <a class="brand" href="#top">Sweetmoon Atlas</a>
+      <div class="nav-links">
+        <a href="#journey">旅程</a>
+        <a href="#sources">资料来源</a>
+      </div>
+    </nav>
+
+    <section class="hero-copy" aria-labelledby="page-title">
+      <p class="eyebrow">Beijing / Stockholm / Paris / Venice / Florence / Rome</p>
+      <h1 id="page-title">A honeymoon told by maps</h1>
+      <p class="hero-lead">向下滑动，地图会在飞行、火车和城市之间淡入淡出。夜航、白天街景、标志性建筑和当地风土人情，会随着日期一起切换。</p>
+      <a class="button primary" href="#journey">开始旅程</a>
+    </section>
+
+    <aside class="hero-ticket" aria-label="行程摘要">
+      <span>North to south route</span>
+      <strong>Stockholm / Paris / Venice / Florence / Rome</strong>
+      <small>2026.09.12 - 2026.09.26 · flights across countries · high-speed rail across Italy</small>
+    </aside>
+  </header>
+
+  <main>
+    <section class="journey-shell" id="journey" aria-label="滚动旅行长卷">
+      <aside class="date-rail" aria-label="旅行日期轴">
+        <div class="date-rail-header">
+          <span>Timeline</span>
+          <strong id="rail-range">9/12 - 9/26</strong>
+        </div>
+        <div class="date-list" id="date-list"></div>
+      </aside>
+
+      <div class="story-column" id="story-column"></div>
+
+      <aside class="stage" aria-label="当前旅程画面">
+        <div class="stage-map" id="stage-map"></div>
+        <div class="stage-media" id="stage-media"></div>
+        <div class="stage-caption" id="stage-caption"></div>
+      </aside>
+    </section>
+
+    <section class="sources-section" id="sources" aria-labelledby="sources-title">
+      <p class="eyebrow">Sources</p>
+      <h2 id="sources-title">资料来源与临近复核清单</h2>
+      <div id="sources-list" class="sources-list"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Sweetmoon Atlas · 北京出发欧洲蜜月攻略 · 2026 年 9 月版</p>
+    <a href="#top">回到顶部</a>
+  </footer>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="app.js" defer></script>
+</body>
+</html>
