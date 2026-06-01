@@ -12,7 +12,6 @@
     vehicleMarker: null,
     activeBackgroundLayer: 0,
     visibleStageType: null,
-    stageSwitchTimer: null,
     ticking: false
   };
 
@@ -145,22 +144,17 @@
       return;
     }
 
-    const passiveMap = isCoarsePointer();
     state.map = L.map(elements.stageMap, {
-      zoomControl: !passiveMap,
-      dragging: !passiveMap,
+      zoomControl: false,
+      dragging: false,
       scrollWheelZoom: false,
-      touchZoom: !passiveMap,
-      doubleClickZoom: !passiveMap,
+      touchZoom: false,
+      doubleClickZoom: false,
       boxZoom: false,
       keyboard: false,
-      tap: !passiveMap,
+      tap: false,
       attributionControl: true
     }).setView([48.8, 18], 4);
-
-    if (!passiveMap) {
-      L.control.zoom({ position: "bottomright" }).addTo(state.map);
-    }
 
     L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
       subdomains: "abcd",
@@ -176,21 +170,27 @@
   }
 
   function setupSceneObserver() {
-    const scenes = document.querySelectorAll(".story-scene");
-    const observer = new IntersectionObserver((entries) => {
-      const visible = entries
-        .filter((entry) => entry.isIntersecting)
-        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    updateScrollDrivenScene();
+  }
 
-      if (visible) {
-        setActiveScene(Number(visible.target.dataset.sceneIndex));
+  function updateScrollDrivenScene() {
+    const sceneElements = document.querySelectorAll(".story-scene");
+    if (!sceneElements.length) return;
+
+    const triggerLine = scrollTriggerLine();
+    let nextIndex = 0;
+    sceneElements.forEach((scene, index) => {
+      if (scene.getBoundingClientRect().top <= triggerLine) {
+        nextIndex = index;
       }
-    }, {
-      threshold: [0.32, 0.48, 0.62],
-      rootMargin: "-16% 0px -20% 0px"
     });
 
-    scenes.forEach((scene) => observer.observe(scene));
+    if (nextIndex !== state.activeIndex) {
+      setActiveScene(nextIndex);
+      return;
+    }
+
+    updateActiveStageProgress();
   }
 
   function setupScrollProgress() {
@@ -201,7 +201,11 @@
         const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
         const progress = maxScroll > 0 ? window.scrollY / maxScroll : 0;
         elements.scrollProgressBar.style.transform = `scaleX(${progress})`;
-        updateActiveStageProgress();
+        if (state.data) {
+          updateScrollDrivenScene();
+        } else {
+          updateActiveStageProgress();
+        }
         state.ticking = false;
       });
     };
@@ -251,13 +255,12 @@
     const isTransport = scene.type === "transport";
     const nextType = isTransport ? "map" : "media";
 
-    if (state.stageSwitchTimer) {
-      clearTimeout(state.stageSwitchTimer);
-      state.stageSwitchTimer = null;
-    }
-
     const applyStage = () => {
-      if (state.data?.scenes[state.activeIndex] !== scene) return;
+      if (state.data?.scenes[state.activeIndex] !== scene) {
+        elements.stageContent.classList.remove("is-switching");
+        elements.stagePanel.classList.remove("is-switching");
+        return;
+      }
 
       elements.stagePanel.dataset.stageMode = isTransport ? scene.mode : scene.type;
       elements.stageKicker.textContent = scene.eyebrow;
@@ -280,17 +283,7 @@
       });
     };
 
-    if (state.visibleStageType === null || isCoarsePointer()) {
-      applyStage();
-      return;
-    }
-
-    elements.stagePanel.classList.add("is-switching");
-    elements.stageContent.classList.add("is-switching");
-    state.stageSwitchTimer = setTimeout(() => {
-      state.stageSwitchTimer = null;
-      applyStage();
-    }, 320);
+    applyStage();
   }
 
   function renderRoute(scene) {
@@ -341,16 +334,37 @@
     }).addTo(state.routeLayer);
 
     const bounds = L.latLngBounds(points);
-    state.map.fitBounds(bounds, {
+    const fitOptions = {
       padding: scene.mode === "flight" ? [42, 42] : [70, 70],
-      maxZoom: scene.mode === "local" ? 13 : scene.mode === "train" ? 7 : 4
-    });
+      maxZoom: scene.mode === "local" ? 13 : scene.mode === "train" ? 8 : 4,
+      fixedZoom: fixedRouteZoom(scene.mode)
+    };
+    fitRouteBounds(bounds, fitOptions);
 
     updateRouteProgress(scene, routeSceneProgress(state.activeIndex));
     setTimeout(() => {
-      state.map.invalidateSize();
+      if (state.data?.scenes[state.activeIndex] !== scene) return;
+      fitRouteBounds(bounds, fitOptions);
       updateActiveStageProgress();
     }, 80);
+  }
+
+  function fitRouteBounds(bounds, options) {
+    if (!state.map) return;
+    state.map.invalidateSize();
+    if (typeof options.fixedZoom === "number") {
+      const center = bounds.getCenter();
+      state.map.setView([center.lat, center.lng], options.fixedZoom, { animate: false, reset: true });
+      return;
+    }
+
+    state.map.fitBounds(bounds, { ...options, animate: false, reset: true });
+  }
+
+  function fixedRouteZoom(mode) {
+    if (mode === "local") return 13;
+    if (mode === "train") return 7;
+    return null;
   }
 
   function updateActiveStageProgress() {
@@ -378,18 +392,38 @@
     if (!sceneElement) return 0;
 
     const rect = sceneElement.getBoundingClientRect();
-    const startLine = window.innerHeight * 0.72;
-    const endLine = window.innerHeight * 0.24;
-    const distance = rect.height + startLine - endLine;
-    if (distance <= 0) return 0;
+    const startLine = progressStartLine(index);
+    const endLine = progressEndLine(index);
+    const distance = Math.max(rect.height + startLine - endLine, 1);
 
     return clamp((startLine - rect.top) / distance, 0, 1);
+  }
+
+  function scrollTriggerLine() {
+    return window.innerHeight * (isCoarsePointer() ? 0.64 : 0.72);
+  }
+
+  function progressStartLine(index) {
+    if (isCoarsePointer() && index === 0) {
+      return window.innerHeight * 1.64;
+    }
+
+    return scrollTriggerLine();
+  }
+
+  function progressEndLine(index) {
+    if (isCoarsePointer() && index === 0) {
+      return scrollTriggerLine();
+    }
+
+    return scrollTriggerLine();
   }
 
   function updateRouteProgress(scene, progress) {
     if (!state.routeMetrics || !state.routeProgressLine || !state.vehicleMarker) return;
 
-    const route = interpolateRoute(state.routeMetrics, progress);
+    const travelProgress = transportTravelProgress(progress);
+    const route = interpolateRoute(state.routeMetrics, travelProgress);
     state.routeProgressLine.setLatLngs(route.traveled);
     state.vehicleMarker.setLatLng(route.latLng);
     state.vehicleMarker.setZIndexOffset(1000);
@@ -397,8 +431,12 @@
     const markerElement = state.vehicleMarker.getElement();
     if (markerElement) {
       markerElement.style.setProperty("--vehicle-angle", `${route.bearing}deg`);
-      markerElement.setAttribute("aria-label", `${scene.mode === "train" ? "火车" : scene.mode === "flight" ? "飞机" : "交通工具"}行进进度 ${Math.round(progress * 100)}%`);
+      markerElement.setAttribute("aria-label", `${scene.mode === "train" ? "火车" : scene.mode === "flight" ? "飞机" : "交通工具"}行进进度 ${Math.round(travelProgress * 100)}%`);
     }
+  }
+
+  function transportTravelProgress(progress) {
+    return clamp((progress - 0.14) / 0.82, 0, 1);
   }
 
   function buildRouteMetrics(points) {
@@ -544,6 +582,13 @@
       ${tips}
     `;
     elements.stageMedia.scrollTop = 0;
+    restartMediaReveal();
+  }
+
+  function restartMediaReveal() {
+    elements.stageMedia.classList.remove("is-refreshing");
+    void elements.stageMedia.offsetWidth;
+    elements.stageMedia.classList.add("is-refreshing");
   }
 
   function sceneMedia(scene) {
